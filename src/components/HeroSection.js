@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-[#030438] text-white h-[80vh] flex flex-col items-center justify-start text-center px-6 md:px-12 pt-35 pb-0 overflow-hidden">
+    <section className="relative bg-[#030438] text-white h-[80vh] flex flex-col items-center justify-between text-center px-6 md:px-12 pt-35 pb-0 overflow-hidden">
       {/* Background Grid SVG - Covers Full Width */}
       <div className="absolute inset-0 w-full h-full">
         <svg className="absolute inset-0 w-full h-full opacity-50 pointer-events-none brightness-110 mix-blend-screen" xmlns="http://www.w3.org/2000/svg">
@@ -24,63 +24,67 @@ export default function HeroSection() {
         <div className="w-[90vw] h-[50vw] max-w-[1200px] max-h-[600px] bg-[#7A3DD7] opacity-35 rounded-full blur-[120px]"></div>
       </div>
 
-      {/* Main Heading */}
-      <div className="max-w-4xl mx-auto relative z-10">
-        <h1 className="text-5xl md:text-8xl font-bold leading-[0.8] font-vastagoLight">
-          We Build <br />
+      {/* Main Content Container */}
+      <div className="flex flex-col items-center justify-center flex-grow">
+        {/* Main Heading */}
+        <div className="max-w-4xl mx-auto relative z-10">
+          <h1 className="text-4xl md:text-6xl font-bold leading-[0.8] font-vastagoLight">
+            We Build <br />
 
-          {/* Centering "E" SVG with "xperiences" */}
-          <span className="text-white flex items-center justify-center gap-2">
-            {/* E SVG Drops from Higher & Bounces */}
-            <motion.div
-              initial={{ y: -250, x: 0, opacity: 0 }} // Starts above navbar
-              animate={{
-                y: [-250, 120, -20, 5, 0], // Drops below, then bounces back up
-                x: [0, 30, -15, 5, 0], // Subtle left-right motion for realism
-                opacity: 1
-              }}
-              transition={{ duration: 1.8, ease: "easeOut" }} // Smooth transition
-              whileHover={{ rotateY: 180 }} // Flips on hover
-              className="inline-block"
-            >
-              <Image src="/svgs/E.svg" alt="E" width={100} height={100} className="inline-block align-middle" />
-            </motion.div>
+            {/* Centering "E" SVG with "xperiences" */}
+            <span className="text-white flex items-center justify-center gap-2">
+              {/* E SVG Drops from Higher & Bounces */}
+              <motion.div
+                initial={{ y: -250, x: 0, opacity: 0 }}
+                animate={{
+                  y: [-250, 120, -20, 5, 0],
+                  x: [0, 30, -15, 5, 0],
+                  opacity: 1
+                }}
+                transition={{ duration: 1.8, ease: "easeOut" }}
+                whileHover={{ rotateY: 180 }}
+                className="inline-block"
+              >
+                <Image src="/svgs/E.svg" alt="E" width={80} height={80} className="inline-block align-middle md:w-[100px] md:h-[100px]" />
+              </motion.div>
 
-            <span className="relative -mt-2 font-vastago-bold">xperiences</span>
-          </span>
+              <span className="relative -mt-2 font-vastago-bold">xperiences</span>
+            </span>
 
-          {/* Reduce space between "xperiences" and "that Lasts" */}
-          <span className="block leading-[0.8]">
-            that{" "}
+            <span>
+              that{" "}
+            </span>
             <motion.span
-              className="relative inline-block ml-2"
+              className="relative inline-block ml-1"
               initial={{ rotate: 4, skewX: 6 }}
               whileHover={{ rotate: -4, skewX: -6 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              {/* Improved Yellow Box */}
-              <span className="absolute inset-0 bg-yellow-400 w-full h-full -z-10 transform skew-x-6 rotate-4 rounded-md px-2 py-0.5"></span>
-              <span className="relative px-2 text-black font-vastago-bold">Lasts</span>
+              <span className="absolute inset-0 bg-yellow-400 w-full h-full -z-10 transform skew-x-6 rotate-4 rounded-md"></span>
+              
+              <span className="relative inline-block px-2 py-2 text-black font-vastago-bold">
+                Lasts
+              </span>
             </motion.span>
-          </span>
-        </h1>
+          </h1>
 
-        {/* Subheading */}
-        <p className="mt-10 text-lg md:text-xl max-w-2xl mx-auto opacity-90 font-vastago-light">
-          We specialize in creating digital experiences that are as 
-          intuitive as they are stunning. Stand out effortlessly.
-        </p>
+          {/* Subheading */}
+          <p className="mt-6 md:mt-10 text-base md:text-lg max-w-2xl mx-auto opacity-90 font-vastago-light">
+            We specialize in creating digital experiences that are as 
+            intuitive as they are stunning. Stand out effortlessly.
+          </p>
+        </div>
+
+        {/* Floating Badge Elements */}
+        <FloatingBadge position="left" icon="/svgs/Design.svg" />
+        <FloatingBadge position="right" icon="/svgs/Development.svg" />
       </div>
-
-      {/* Floating Badge Elements */}
-      <FloatingBadge position="left" icon="/svgs/Design.svg" />
-      <FloatingBadge position="right" icon="/svgs/Development.svg" />
 
       {/* Decorative Elements */}
       <DecorativeElements />
 
-      {/* Scroll Indicator (Moved Higher) */}
-      <div className="absolute bottom-10 md:bottom-10 animate-bounce-slow">
+      {/* Scroll Indicator - Now part of the content flow */}
+      <div className="w-full flex justify-center py-0 animate-bounce-slow">
         <ScrollIndicator />
       </div>
     </section>
