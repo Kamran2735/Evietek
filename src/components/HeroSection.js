@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-[#030438] text-white h-[80vh] flex flex-col items-center justify-between text-center px-6 md:px-12 pt-35 pb-0 overflow-hidden">
+    <section className="relative bg-[#030438] text-white h-[70vh] md:h-[80vh] flex flex-col items-center justify-between text-center px-6 md:px-12 pt-20 md:pt-35 pb-0 overflow-hidden">
       {/* Background Grid SVG - Covers Full Width */}
       <div className="absolute inset-0 w-full h-full">
         <svg className="absolute inset-0 w-full h-full opacity-50 pointer-events-none brightness-110 mix-blend-screen" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +45,7 @@ export default function HeroSection() {
                 whileHover={{ rotateY: 180 }}
                 className="inline-block"
               >
-                <Image src="/svgs/E.svg" alt="E" width={80} height={80} className="inline-block align-middle md:w-[100px] md:h-[100px]" />
+                <Image src="/svgs/E.svg" alt="E" width={60} height={60} className="inline-block align-middle md:w-[100px] md:h-[100px]" />
               </motion.div>
 
               <span className="relative -mt-2 font-vastago-bold">xperiences</span>
@@ -62,7 +62,7 @@ export default function HeroSection() {
             >
               <span className="absolute inset-0 bg-yellow-400 w-full h-full -z-10 transform skew-x-6 rotate-4 rounded-md"></span>
               
-              <span className="relative inline-block px-2 py-2 text-black font-vastago-bold">
+              <span className="relative inline-block px-1 py-1 text-black font-vastago-bold">
                 Lasts
               </span>
             </motion.span>

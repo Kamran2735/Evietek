@@ -60,11 +60,11 @@ export default function AboutContent() {
   };
 
   return (
-    <section className="relative container mx-auto px-4 py-4">
+    <section className="relative container mx-auto px-4 py-4  ">
       <div className="max-w-2xl relative z-10">
         {/* Heading with Bricolage Grotesque and Updated Color */}
         <motion.h2 
-          className={`text-4xl md:text-5xl font-bold leading-tight ${bricolage.variable} text-[#341E61]`}
+          className={`text-3xl sm:text-4xl md:text-4xl font-bold leading-tight ${bricolage.variable} text-[#341E61]`}
           variants={textVariants}
           initial="initial"
           whileInView="animate"
@@ -75,7 +75,7 @@ export default function AboutContent() {
 
         {/* Body text with Gilroy-Medium and Updated Color */}
         <motion.p 
-          className="mt-4 text-lg leading-relaxed font-gilroy-medium text-[#341E61]"
+          className="mt-4 text-base sm:text-lg md:text-lg leading-relaxed font-gilroy-medium text-[#341E61]"
           variants={textVariants}
           initial="initial"
           whileInView="animate"
@@ -87,7 +87,7 @@ export default function AboutContent() {
 
         {/* CTA Button with Updated Background Color */}
         <motion.button 
-          className="mt-6 flex items-center gap-2 bg-[#341E61] hover:bg-[#412876] text-white px-6 py-3 rounded-xl font-semibold text-lg shadow-lg transition-all"
+          className="mt-4 sm:mt-6 flex items-center gap-2 bg-[#341E61] hover:bg-[#412876] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold text-base sm:text-lg md:text-base shadow-lg transition-all"
           variants={buttonVariants}
           initial="initial"
           whileInView="animate"
