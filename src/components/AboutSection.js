@@ -68,7 +68,7 @@ export default function AboutSection() {
         variants={decorationVariants2}
       >
         <Image 
-          src="/About/divider.svg" 
+          src="/divider.svg" 
           alt="Divider" 
           width={800} 
           height={30} 
