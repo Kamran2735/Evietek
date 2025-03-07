@@ -23,7 +23,7 @@ export default function PortfolioSection() {
   };
 
   return (
-    <section className="relative bg-[#F9F9F9] text-[#3E2472] py-6 md:py-12 lg:pt-0 px-2 sm:px-4 md:px-8 lg:px-12 pb-15 md:pb-20 lg:pb-30 overflow-hidden">
+    <section className="relative bg-[#F9F9F9] text-[#3E2472] py-6 md:py-12 lg:pt-0 px-2 sm:px-4 md:px-8 lg:px-12 pb-15 md:pb-20 lg:pb-20 overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-40 right-20 md:top-20 md:right-50 lg:top-20 lg:right-100 w-20 h-20 sm:w-30 sm:h-30 lg:w-40 lg:h-40">
         <Image src="/Portfolio/eye.svg" alt="Eye" width={200} height={200} />
@@ -31,7 +31,7 @@ export default function PortfolioSection() {
       <div className="absolute bottom-40 left-0 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20">
         <Image src="/Portfolio/basketball.svg" alt="Basketball" width={80} height={80} />
       </div>
-      <div className="absolute inset-x-0 bottom-12 md:bottom-15 lg:bottom-0 flex justify-end">
+      <div className="absolute inset-x-0 bottom-12 md:bottom-15 lg:bottom-[-30] flex justify-end">
         <Image 
           src="/Portfolio/Abstract.svg" 
           alt="Abstract" 

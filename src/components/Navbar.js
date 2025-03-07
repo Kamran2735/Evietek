@@ -60,7 +60,7 @@ export default function Navbar() {
 
         {/* CTA Button (Desktop) */}
         <Link href="/contact" className="hidden md:block">
-          <button className="flex items-center gap-1.5 bg-gradient-to-b from-[#9F67FF] to-[#F271C4] hover:opacity-90 text-white px-2 py-1.5 rounded-2xl font-semibold text-sm lg:text-base xl:text-lg shadow-lg transition-all transform hover:scale-105">
+          <button className="flex items-center gap-1.5 bg-gradient-to-b from-[#5A50FF] to-[#D376FF] hover:opacity-90 text-white px-4 py-2 rounded-2xl font-semibold text-sm lg:text-base xl:text-lg shadow-lg transition-all transform hover:scale-105">
             <Image src="/phone.svg" alt="Phone" width={15} height={15} />
             Book a Meeting
           </button>

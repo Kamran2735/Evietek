@@ -19,8 +19,8 @@ export default function ServiceCard({ background, title, description, icon, deco
         />
       </div>
 
-      {/* Card Title - Bricolage Grotesque */}
-      <h3 className="mt-4 text-[36px] leading-[103%] font-semibold text-[#3E2472] text-center font-bricolage">
+      {/* Card Title - Bricolage Grotesque - Smaller on Mobile */}
+      <h3 className="mt-4 text-[30px] sm:text-[36px] leading-[103%] font-semibold text-[#3E2472] text-center font-bricolage">
         {title}
       </h3>
 

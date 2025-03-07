@@ -44,7 +44,7 @@ export default function AboutSection() {
 
       {/* Decorative Sticker (Left Corner) */}
       <motion.div
-        className="absolute bottom-60 left-0 z-0"
+        className="absolute bottom-60 left-1 z-0"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, amount: 0.2 }}
@@ -55,7 +55,7 @@ export default function AboutSection() {
           alt="Abstract Sticker" 
           width={50} 
           height={50} 
-          className="opacity-60 sm:w-[80px] sm:h-[80px] sm:opacity-70 md:w-[100px] md:h-[100px] md:opacity-0 lg:w-[120px] lg:h-[120px] lg:opacity-100"
+          className="opacity-60 sm:w-[80px] sm:h-[80px] sm:opacity-70 md:w-[100px] md:h-[100px] md:opacity-0 lg:w-[160px] lg:h-[160px] lg:opacity-100"
         />
       </motion.div>
 

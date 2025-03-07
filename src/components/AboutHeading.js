@@ -11,7 +11,7 @@ export default function AboutHeading() {
         className="relative z-10 -mt-6 -mr-2"
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
         <Image 
