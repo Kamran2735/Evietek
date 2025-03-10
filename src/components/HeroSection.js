@@ -28,7 +28,7 @@ export default function HeroSection() {
       <div className="flex flex-col items-center justify-center flex-grow">
         {/* Main Heading */}
         <div className="max-w-4xl mx-auto relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold leading-[0.8] font-vastagoLight">
+          <h1 className="text-4xl md:text-6xl xl:text-8xl font-bold leading-[0.8] font-vastagoLight">
             We Build <br />
 
             {/* Centering "E" SVG with "xperiences" */}

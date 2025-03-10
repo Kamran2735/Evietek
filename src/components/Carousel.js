@@ -3,6 +3,7 @@
 import { forwardRef, useImperativeHandle, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { motion } from "framer-motion";
 import "swiper/css";
 import Image from "next/image";
 
@@ -23,15 +24,20 @@ const Carousel = forwardRef((props, ref) => {
     { id: 4, src: "/Portfolio/img_4.png", alt: "Portfolio 4" },
   ];
 
+  // Animation variants for the initial cards
+  const cardVariants = {
+    hidden: { opacity: 0, y: -200 }, // Start higher for a stronger drop effect
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut", delay: i * 0.3 }, // Increased delay for staircase effect
+    }),
+  };
+
   return (
     <div className="relative w-screen overflow-hidden">
       <div 
-        className="
-          relative w-full 
-          px-2 pr-8 sm:px-4 md:px-8 lg:px-12 
-          flex justify-center lg:justify-end
-          overflow-hidden
-        "
+        className="relative w-full px-2 pr-8 sm:px-4 md:px-8 lg:px-12 flex justify-center lg:justify-end overflow-hidden"
       >
         <Swiper
           modules={[Autoplay]}
@@ -56,7 +62,14 @@ const Carousel = forwardRef((props, ref) => {
           {/* Generate slides dynamically */}
           {[...portfolioItems, ...portfolioItems].map((item, index) => (
             <SwiperSlide key={index} className="w-[250px] sm:w-[300px] md:w-[350px] lg:w-[400px]">
-              <div className="bg-white shadow-lg rounded-2xl p-4">
+              <motion.div
+                className="bg-white shadow-lg rounded-2xl p-4"
+                custom={index} // Pass index for stagger effect
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={cardVariants}
+              >
                 <Image 
                   src={item.src} 
                   alt={item.alt} 
@@ -64,7 +77,7 @@ const Carousel = forwardRef((props, ref) => {
                   height={300} 
                   className="rounded-lg w-full h-auto"
                 />
-              </div>
+              </motion.div>
             </SwiperSlide>
           ))}
         </Swiper>

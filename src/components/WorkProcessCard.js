@@ -3,48 +3,55 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function WorkProcessCard({ number, icon, title, description, highlight, rotation }) {
+export default function WorkProcessCard({ number, icon, title, description, rotation }) {
   return (
     <motion.div
-      className={`relative shadow-lg rounded-[22px] p-8 pt-14 w-[280px] sm:w-[300px] md:w-[330px] lg:w-[280px] transition-all duration-300`}
+      className="relative shadow-lg rounded-[22px] p-8 pt-14 w-[280px] sm:w-[300px] md:w-[330px] lg:w-[280px] transition-all duration-300 group"
       initial={{ rotate: 0 }}
       animate={{ rotate: rotation }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      style={{
-        height: "auto",
-        backgroundColor: highlight ? "#5B42F3" : "#FFFFFF",
-        color: highlight ? "#FFFFFF" : "#030438",
-      }}
+      whileHover={{ scale: 1.05 }} // Slight scale effect on hover
+      style={{ height: "auto" }}
     >
-      {/* Icon (Increased size and shifted towards right) */}
-      <div className="absolute -top-8 left-6 w-20 h-20">
+      {/* Icon (Twists like a coin on hover) */}
+      <motion.div
+        className="absolute -top-8 left-6 w-20 h-20"
+        whileHover={{ rotateY: 180 }} // Coin flip effect
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
         <Image src={icon} alt={title} width={80} height={80} />
-      </div>
+      </motion.div>
 
       {/* Number + Heading (Inline) */}
       <div className="flex items-center space-x-2">
-        {/* Number (Circular background, reversed for highlighted card) */}
+        {/* Number (Circular background, reversed for hover) */}
         <div
-          className={`w-10 h-10 flex items-center justify-center rounded-full text-[16px] font-bold
-          ${highlight ? "bg-white text-[#3E2472]" : "bg-[#3E2472] text-white"}`}
+          className="w-10 h-10 flex items-center justify-center rounded-full text-[16px] font-bold
+          bg-[#3E2472] text-white group-hover:bg-white group-hover:text-[#3E2472] transition-all duration-300"
         >
           {number}
         </div>
 
-        {/* Title */}
-        <h3 className="font-bricolage text-[24px] font-semibold leading-[103%]">
+        {/* Title - Now Always Visible */}
+        <h3
+          className="font-bricolage text-[24px] font-semibold leading-[103%] text-[#3E2472] 
+          group-hover:text-white transition-all duration-300"
+        >
           {title}
         </h3>
       </div>
 
-      {/* Description - Color fixed for highlighted card */}
+      {/* Description - Changes color on hover */}
       <p
-        className={`text-[16px] font-gilroy leading-[138%] mt-2 ${
-          highlight ? "text-white" : "text-[#41335E]"
-        }`}
+        className="text-[16px] font-gilroy leading-[138%] mt-2 text-[#41335E] group-hover:text-white transition-all duration-300"
       >
         {description}
       </p>
+
+      {/* Background Color Change on Hover */}
+      <motion.div
+        className="absolute inset-0 rounded-[22px] z-[-1] bg-white group-hover:bg-[#5B42F3] transition-all duration-300"
+      />
     </motion.div>
   );
 }
