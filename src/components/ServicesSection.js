@@ -4,9 +4,9 @@ import Heading from "./ServiceHeading";
 import ServiceCard from "./ServiceCard";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ServicesSection() {
-
     // Right Decorative Animation
     const decorationVariants = {
         initial: { opacity: 0, x: 100 },
@@ -37,6 +37,28 @@ export default function ServicesSection() {
         }
     };
 
+    // Service Cards Data
+    const services = [
+        { 
+            title: "Website Design", 
+            description: "Creating Multipage websites for different companies.",
+            icon: "/Our_Services/Website_Logo.svg",
+            decoration: "/Our_Services/Decor_1.svg"
+        },
+        { 
+            title: "Branding Design", 
+            description: "Helping our Clients to establish an amazing brand with irresistible and strong visual elements.",
+            icon: "/Our_Services/Branding_Design_Logo.svg",
+            decoration: "/Our_Services/Decor_2.svg"
+        },
+        { 
+            title: "Marketing/Landing Page", 
+            description: "Experts are available for creating fast and dope landing pages.",
+            icon: "/Our_Services/Marketing_Logo.svg",
+            decoration: "/Our_Services/Decor_3.svg"
+        }
+    ];
+
     return (
         <section className="relative bg-[#F9F9F9] text-[#333] py-3 md:py-8 lg:pt-8 px-4 md:px-8 lg:px-12 pb-0">
             {/* Section Heading */}
@@ -57,29 +79,19 @@ export default function ServicesSection() {
 
             {/* Services Cards Section */}
             <div className="mt-10 flex flex-wrap justify-center gap-4 lg:gap-6">
-                <ServiceCard 
-                    background="white"
-                    title="Website Design"
-                    description="Creating Multipage websites for different companies."
-                    icon="/Our_Services/Website_Logo.svg"
-                    decoration="/Our_Services/Decor_1.svg"
-                />
-
-                <ServiceCard 
-                    background="white"
-                    title="Branding Design"
-                    description="Helping our Clients to establish an amazing brand with irresistible and strong visual elements."
-                    icon="/Our_Services/Branding_Design_Logo.svg"
-                    decoration="/Our_Services/Decor_2.svg"
-                />
-
-                <ServiceCard 
-                    background="white"
-                    title="Marketing/Landing Page"
-                    description="Experts are available for creating fast and dope landing pages."
-                    icon="/Our_Services/Marketing_Logo.svg"
-                    decoration="/Our_Services/Decor_3.svg"
-                />
+                {services.map((service) => (
+                    <Link key={service.title} href={`/Services/${service.title.toLowerCase().replace(/\s+/g, "-")}`} passHref>
+                        <div className="cursor-pointer">
+                            <ServiceCard 
+                                background="white"
+                                title={service.title}
+                                description={service.description}
+                                icon={service.icon}
+                                decoration={service.decoration}
+                            />
+                        </div>
+                    </Link>
+                ))}
             </div>
 
             {/* Decorative Sticker (Right Corner) */}

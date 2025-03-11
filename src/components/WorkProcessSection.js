@@ -27,12 +27,14 @@ export default function WorkProcessSection() {
     }
   };
 
+  // Modified to handle mobile differently
   const cardVariants = {
     hidden: { opacity: 0, y: -160 }, // Start from above
     visible: (i) => ({
       opacity: 1,
-      y: i % 2 === 0 ? -20 : 20, // Keep 1 & 3 slightly higher, 2 & 4 slightly lower
-      transition: { duration: 0.8, ease: "easeOut", delay: i * 0.2 }, // Staggered effect
+      // No stagger effect on mobile, preserve it for larger screens
+      y: window.innerWidth < 640 ? 0 : (i % 2 === 0 ? -20 : 20),
+      transition: { duration: 0.8, ease: "easeOut", delay: i * 0.2 },
     }),
   };
 
@@ -76,8 +78,8 @@ export default function WorkProcessSection() {
           </motion.h2>
         </div>
 
-        {/* Work Process Cards - Staggered Drop Effect + Floating */}
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:flex xl:flex-row justify-center items-center gap-y-12 gap-x-8 mt-20 px-4 md:px-8 lg:px-12 xl:px-20 2xl:px-32 relative">
+        {/* Work Process Cards - Modified for consistent mobile spacing */}
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:flex xl:flex-row justify-center items-center gap-y-8 sm:gap-y-4 gap-x-8 mt-20 px-4 md:px-8 lg:px-12 xl:px-20 2xl:px-32 relative">
           {[
             {
               icon: "/Work_Process/1.svg",
@@ -85,7 +87,7 @@ export default function WorkProcessSection() {
               title: "Brief/Short Details",
               description: "Come to us with a project brief or short project details that you have currently to give us an idea of your project or product.",
               rotation: 2.52,
-              positionClass: "md:-translate-y-6 lg:-translate-y-8"
+              positionClass: " -translate-y-0  md:-translate-y-6 lg:-translate-y-8" // Added sm: prefix
             },
             {
               icon: "/Work_Process/2.svg",
@@ -94,7 +96,7 @@ export default function WorkProcessSection() {
               description: "After having the details from you, we'll ask questions related to your project to understand the project length and scope.",
               highlight: true,
               rotation: -2.69,
-              positionClass: "md:translate-y-6 lg:translate-y-8"
+              positionClass: "translate-y-0 md:translate-y-6 lg:translate-y-8" // Added sm: prefix
             },
             {
               icon: "/Work_Process/3.svg",
@@ -102,7 +104,7 @@ export default function WorkProcessSection() {
               title: "Providing Quote",
               description: "We will be providing you a quote for the project after having the answers from you and estimating the resources needed for your project.",
               rotation: -1.24,
-              positionClass: "md:-translate-y-6 lg:-translate-y-8"
+              positionClass: "-translate-y-0 md:-translate-y-6 lg:-translate-y-8" // Added sm: prefix
             },
             {
               icon: "/Work_Process/4.svg",
@@ -110,13 +112,13 @@ export default function WorkProcessSection() {
               title: "Get Started",
               description: "If the quote works for both of us, we can have a short meeting or we can directly jump into the process of getting started.",
               rotation: -0.48,
-              positionClass: "md:translate-y-6 lg:translate-y-8"
+              positionClass: "translate-y-0 md:translate-y-6 lg:translate-y-8" // Added sm: prefix
             }
           ].map((card, index) => (
             <motion.div
               key={index}
-              className={`w-full flex justify-center ${card.positionClass}`} // Keep original staggered layout
-              custom={index} // Pass index for stagger effect
+              className={`w-full flex justify-center mb-0 ${card.positionClass}`}
+              custom={index}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}

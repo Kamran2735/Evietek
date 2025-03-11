@@ -32,14 +32,14 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 px-4 py-3 transition-all duration-500 flex justify-between items-center ${
+      className={`relative top-0 left-0 w-full z-50 px-4 py-3 transition-all duration-500 flex justify-between items-center ${
         isScrolled ? "bg-[#030438]/90 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto max-w-7xl flex justify-between items-center w-full">
         {/* Clickable Logo (Redirects to Home) */}
         <Link href="/" className="flex-shrink-0">
-          <Image src="/logo.png" alt="EvieTek Logo" width={120} height={40} />
+          <Image src="/logo.png" alt="EvieTek Logo" width={150} height={40} />
         </Link>
 
         {/* Desktop Navigation */}
@@ -55,6 +55,9 @@ export default function Navbar() {
           </Link>
           <Link href="/services" className={`${pathname === "/services" ? "text-gray-300" : "hover:text-gray-300 transition"}`}>
             Services
+          </Link>
+          <Link href="/case-study" className={`${pathname === "/case-study" ? "text-gray-300" : "hover:text-gray-300 transition"}`}>
+            Case Study
           </Link>
         </div>
 

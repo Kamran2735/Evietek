@@ -13,7 +13,7 @@ const Breadcrumb = ({ title, backgroundImage }) => {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="w-full h-full bg-black/50 absolute top-0 left-0" />
-      <div className="relative z-10 px-8 md:px-16 text-white">
+      <div className="relative z-10 px-8 md:px-36 text-white">
         <h1 className="text-4xl font-bold">{title}</h1>
         <nav className="text-sm mt-2">
           <ol className="flex items-center space-x-2">

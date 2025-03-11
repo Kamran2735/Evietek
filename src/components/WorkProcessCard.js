@@ -6,17 +6,19 @@ import { motion } from "framer-motion";
 export default function WorkProcessCard({ number, icon, title, description, rotation }) {
   return (
     <motion.div
-      className="relative shadow-lg rounded-[22px] p-8 pt-14 w-[280px] sm:w-[300px] md:w-[330px] lg:w-[280px] transition-all duration-300 group"
+      className="relative shadow-lg rounded-[22px] p-8 pt-14 w-[280px] sm:w-[300px] md:w-[280px] lg:w-[280px] 
+      mb-12 sm:mb-0 /* Added bottom margin for mobile only */
+      transition-all duration-300 group"
       initial={{ rotate: 0 }}
       animate={{ rotate: rotation }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      whileHover={{ scale: 1.05 }} // Slight scale effect on hover
+      whileHover={{ scale: 1.05 }}
       style={{ height: "auto" }}
     >
       {/* Icon (Twists like a coin on hover) */}
       <motion.div
         className="absolute -top-8 left-6 w-20 h-20"
-        whileHover={{ rotateY: 180 }} // Coin flip effect
+        whileHover={{ rotateY: 180 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <Image src={icon} alt={title} width={80} height={80} />

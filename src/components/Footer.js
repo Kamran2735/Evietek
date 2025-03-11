@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#090D36] text-white py-7 relative">
+    <footer className="bg-[#030438] text-white py-7 relative">
       {/* Contact Info */}
       <div className="px-6 flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-8 lg:space-x-16 text-center md:text-left text-lg sm:text-lg md:text-base lg:text-xl">
         <div className="flex items-center space-x-3 md:space-x-4">

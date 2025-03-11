@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
 
 const projects = [
   { id: 1, src: "/Portfolio_2/Trakpac.svg", alt: "Trackpac", title: "Trackpac", link: "/projects/trackpac" },
@@ -16,6 +17,8 @@ const PortfolioProjects = () => {
   const [tappedId, setTappedId] = useState(null);
   const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
   const [spacingValue, setSpacingValue] = useState(50);
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { once: true, amount: 0.2 });
 
   useEffect(() => {
     const updateValues = () => {
@@ -56,40 +59,77 @@ const PortfolioProjects = () => {
     return () => document.removeEventListener("click", handleOutsideClick);
   }, [isMobileOrTablet]);
 
+  // Animation variants for the cards
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.4,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { 
+      opacity: 0,
+      y: -100 
+    },
+    visible: { 
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100
+      }
+    }
+  };
+
   return (
-    <div className="relative flex flex-col items-center justify-center mt-4 sm:mt-6 md:mt-8 lg:mt-10">
-      <div className="relative w-full sm:w-[400px] md:w-[580px] lg:w-[700px] xl:w-[800px] 2xl:w-[900px] h-[460px] sm:h-[550px] md:h-[700px] lg:h-[850px] xl:h-[1000px] 2xl:h-[1100px] flex flex-col items-center">
+    <div 
+      ref={containerRef}
+      className="relative flex flex-col items-center justify-center mt-4 sm:mt-6 md:mt-8 lg:mt-10"
+    >
+      <motion.div 
+        className="relative w-full sm:w-[400px] md:w-[580px] lg:w-[700px] xl:w-[800px] 2xl:w-[900px] h-[460px] sm:h-[550px] md:h-[700px] lg:h-[850px] xl:h-[1000px] 2xl:h-[1100px] flex flex-col items-center"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+      >
         {projects.map((project, index) => (
           <motion.div
             key={project.id}
-            className="portfolio-card absolute w-full transition-transform duration-300 ease-in-out"
+            className="absolute w-full"
             style={{
               top: `${(projects.length - 1 - index) * spacingValue}px`, 
-              zIndex: projects.length - index, 
+              zIndex: projects.length - index,
             }}
-            initial={{ opacity: 0, y: -200 }} // Start from above
-            whileInView={{ opacity: 1, y: 0 }} // Animate when in viewport
-            viewport={{ once: true, amount: 0.3 }} // Trigger only once per view
-            transition={{
-              duration: 0.8,
-              ease: "easeOut",
-              delay: (projects.length + index) * 0.3, // Staggered effect (furthest back drops first)
-            }}
-            onClick={(e) => handleTap(e, project.id, project.link)}
+            variants={cardVariants}
+            custom={index}
           >
-            <Link href={project.link} className="w-full px-2 sm:px-0">
-              <Image
-                src={project.src}
-                alt={project.alt}
-                width={1000}
-                height={400}
-                className="rounded-lg shadow-lg cursor-pointer w-full max-h-[280px] sm:max-h-[230px] md:max-h-[400px] lg:max-h-[500px] xl:max-h-none 2xl:max-h-none"
-                priority
-              />
+            <Link 
+              href={project.link} 
+              className={`portfolio-card block w-full transition-transform duration-300 ease-in-out
+                hover:-translate-y-20 sm:hover:-translate-y-30 md:hover:-translate-y-40 lg:hover:-translate-y-50 xl:hover:-translate-y-60 
+                ${isMobileOrTablet && tappedId === project.id ? 'translate-y-[-100px] sm:translate-y-[-120px] md:translate-y-[-160px]' : ''}`}
+              onClick={(e) => handleTap(e, project.id, project.link)}
+            >
+              <div className="w-full px-2 sm:px-0">
+                <Image
+                  src={project.src}
+                  alt={project.alt}
+                  width={1000}
+                  height={400}
+                  className="rounded-lg shadow-lg cursor-pointer w-full max-h-[280px] sm:max-h-[230px] md:max-h-[400px] lg:max-h-[500px] xl:max-h-none 2xl:max-h-none"
+                  priority
+                />
+              </div>
             </Link>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
