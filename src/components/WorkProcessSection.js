@@ -134,7 +134,7 @@ export default function WorkProcessSection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-20">
-          <Link href="/contact" className="block">
+          <Link href="/book-a-meeting" className="block">
             <button className="flex items-center gap-1.5 bg-gradient-to-b from-[#5A50FF] to-[#D376FF] hover:opacity-90 text-white px-6 py-3 rounded-2xl font-semibold text-sm md:text-base lg:text-lg shadow-lg transition-all transform hover:scale-105">
               <Image src="/phone.svg" alt="Phone" width={20} height={20} />
               Book a Meeting

@@ -5,7 +5,7 @@ const ServiceCard = ({ title, icon, description }) => {
     <div className="group relative p-8 rounded-2xl shadow-lg transition-all duration-500 bg-white cursor-pointer flex flex-col justify-between min-h-[300px] overflow-hidden">
       
       {/* Gradient Overlay - Appears from Bottom on Hover */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#8750F7] to-[#4D9FFF] opacity-0 translate-y-full transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#4D9FFF] to-[#8750F7] opacity-0 translate-y-full transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 z-0"></div>
 
       {/* Content - Ensures Text is Above Gradient */}
       <div className="relative z-10">
@@ -22,13 +22,13 @@ const ServiceCard = ({ title, icon, description }) => {
 
         {/* Title and Arrow in the same row */}
         <div className="flex items-center justify-between mb-4 mt-10">
-          <h3 className="text-xl font-semibold text-gray-900 group-hover:text-white transition-all duration-500">
+          <h3 className="text-2xl font-semibold text-[#030438] group-hover:text-white transition-all duration-500">
             {title}
           </h3>
 
           {/* Arrow Circle - Initially Gradient, Turns White on Hover */}
           <div className="w-10 h-10 flex items-center justify-center rounded-full 
-                bg-[#4D9FFF] transition-all duration-500 
+                bg-[#5E51FE] transition-all duration-500 
                 group-hover:bg-white">
 
             {/* Arrow - Initially White, Turns Gradient on Hover */}
@@ -41,7 +41,7 @@ const ServiceCard = ({ title, icon, description }) => {
         </div>
 
         {/* Description - Adjusted Spacing */}
-        <p className="text-gray-700 text-sm leading-relaxed group-hover:text-white transition-all duration-500 mb-2">
+        <p className="text-[#51328F] text-lg leading-relaxed group-hover:text-white transition-all duration-500 mb-2">
           {description}
         </p>
       </div>

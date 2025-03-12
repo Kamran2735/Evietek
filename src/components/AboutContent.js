@@ -3,6 +3,7 @@
 import { Bricolage_Grotesque } from "next/font/google";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 // Import Bricolage Grotesque font
 const bricolage = Bricolage_Grotesque({
@@ -86,29 +87,31 @@ export default function AboutContent() {
         </motion.p>
 
         {/* CTA Button with Updated Background Color */}
-        <motion.button 
-          className="mt-4 sm:mt-6 flex items-center gap-2 bg-[#341E61] hover:bg-[#412876] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold text-base sm:text-lg md:text-base shadow-lg transition-all"
-          variants={buttonVariants}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, amount: 0.2 }}
-          whileHover="hover"
-        >
-          <motion.div
-            initial={{ rotate: 0 }}
-            whileHover={{ rotate: [0, 15, -15, 0] }}
-            transition={{ duration: 0.3 }}
-          >
-            <Image 
-              src="/phone.svg" 
-              alt="Phone" 
-              width={20} 
-              height={20} 
-              className="mr-2"
-            />
-          </motion.div>
-          Book a Meeting
-        </motion.button>
+        <Link href="/book-a-meeting">
+  <motion.button
+    className="mt-4 sm:mt-6 flex items-center gap-2 bg-[#341E61] hover:bg-[#412876] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold text-base sm:text-lg md:text-base shadow-lg transition-all"
+    variants={buttonVariants}
+    initial="initial"
+    whileInView="animate"
+    viewport={{ once: true, amount: 0.2 }}
+    whileHover="hover"
+  >
+    <motion.div
+      initial={{ rotate: 0 }}
+      whileHover={{ rotate: [0, 15, -15, 0] }}
+      transition={{ duration: 0.3 }}
+    >
+      <Image 
+        src="/phone.svg" 
+        alt="Phone" 
+        width={20} 
+        height={20} 
+        className="mr-2"
+      />
+    </motion.div>
+    Book a Meeting
+  </motion.button>
+</Link>
       </div>
     </section>
   );

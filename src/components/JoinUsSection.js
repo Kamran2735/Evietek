@@ -191,7 +191,7 @@ export default function JoinUSSection() {
           viewport={{ once: true }}
           variants={textAnimation}
         >
-          <Link href="/contact" className="block">
+          <Link href="/book-a-meeting" className="block">
             <button className="flex items-center gap-2 bg-gradient-to-b from-[#5A50FF] to-[#D376FF] hover:opacity-90 text-white px-5 py-2 md:px-6 md:py-3 rounded-2xl font-semibold text-sm md:text-base xl:text-lg shadow-lg transition-all transform hover:scale-105">
               <Image src="/phone.svg" alt="Phone" width={18} height={18} className="md:w-[20px] md:h-[20px]" />
               Book a Meeting

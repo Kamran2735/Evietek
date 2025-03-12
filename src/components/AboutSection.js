@@ -28,7 +28,7 @@ export default function AboutSection() {
   };
 
   return (
-    <section className="relative bg-[#F9F9F9] text-[#333] py-6 md:py-12 lg:pt-16 px-4 md:px-8 lg:px-12 pb-0">
+    <section id="about-section" className="relative bg-[#F9F9F9] text-[#333] py-6 md:py-12 lg:pt-16 px-4 md:px-8 lg:px-12 pb-0">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-8 lg:gap-10 relative z-10">
         {/* Left Content */}
         <div className="md:w-1/2">

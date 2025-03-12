@@ -12,6 +12,7 @@ module.exports = {
          bricolage: ["var(--font-bricolage)", "sans-serif"],
       },
       animation: {
+        'spin-slow': 'spin 15s linear infinite',
         'float': 'float 6s ease-in-out infinite',
         'float-left': 'float-left 5s ease-in-out infinite',
         'float-right': 'float-right 5s ease-in-out infinite',

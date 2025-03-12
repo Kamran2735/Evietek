@@ -1,16 +1,16 @@
 import Breadcrumb from '@/components/BreadCrumb';
-import ServicesSection from '@/components/ServicesPageSection';
+import AboutUsSection from '@/components/AboutUsSection';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import FAQSection from '@/components/FAQSection';
 
-const ServicesPage = () => {
+const AboutPage = () => {
   return (
     <main className="bg-[#F2F2F5]">  
       <Breadcrumb 
         title="Our Services" 
         backgroundImage="/Services/services-bg.jpg" 
       />
-        <ServicesSection /> 
+        <AboutUsSection />
         <WhyChooseUs />
         <FAQSection />
 
@@ -19,4 +19,4 @@ const ServicesPage = () => {
   );
 };
 
-export default ServicesPage;
+export default AboutPage;
