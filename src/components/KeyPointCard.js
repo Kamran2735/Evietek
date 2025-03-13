@@ -4,7 +4,7 @@ const KeyPointCard = ({ icon, title, description }) => {
   return (
     <div className="group relative flex items-center gap-12 p-4 px-8 rounded-xl bg-white shadow-md overflow-hidden cursor-pointer">
       {/* Gradient Fill Animation - Fills from Top on Hover */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#4D9FFF] to-[#8750F7] 
+      <div className="absolute inset-0 bg-gradient-to-b from-[#5A50FF] to-[#D376FF] 
                       transform translate-y-[-100%] transition-transform duration-500 group-hover:translate-y-0">
       </div>
 
@@ -15,10 +15,10 @@ const KeyPointCard = ({ icon, title, description }) => {
           <Image
             src={icon}
             alt={title}
-            width={48}
-            height={48}
-            className="transition-all duration-500 group-hover:invert"
-          />
+            width={50}
+            height={50}
+            className="transition-all duration-500 group-hover:invert group-hover:brightness-0 group-hover:contrast-100"
+            />
         </div>
 
         {/* Text */}

@@ -47,9 +47,6 @@ export default function Navbar() {
           <Link href="/about" className={`${pathname === "/about" ? "text-gray-300" : "hover:text-gray-300 transition"}`}>
             About us
           </Link>
-          <Link href="/how-we-work" className={`${pathname === "/how-we-work" ? "text-gray-300" : "hover:text-gray-300 transition"}`}>
-            How We Work
-          </Link>
           <Link href="/portfolio" className={`${pathname === "/portfolio" ? "text-gray-300" : "hover:text-gray-300 transition"}`}>
             Portfolio
           </Link>
@@ -80,9 +77,6 @@ export default function Navbar() {
         <div className="md:hidden fixed top-0 left-0 w-full h-full bg-[#030438]/90 backdrop-blur-md flex flex-col items-center justify-center space-y-6 text-white text-lg font-medium tracking-wide z-40">
           <Link href="/about" onClick={closeMenu} className={`${pathname === "/about" ? "text-gray-300" : "hover:text-gray-300 transition"}`}>
             About us
-          </Link>
-          <Link href="/how-we-work" onClick={closeMenu} className={`${pathname === "/how-we-work" ? "text-gray-300" : "hover:text-gray-300 transition"}`}>
-            How We Work
           </Link>
           <Link href="/portfolio" onClick={closeMenu} className={`${pathname === "/portfolio" ? "text-gray-300" : "hover:text-gray-300 transition"}`}>
             Portfolio

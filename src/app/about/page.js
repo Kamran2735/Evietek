@@ -1,7 +1,10 @@
 import Breadcrumb from '@/components/BreadCrumb';
 import AboutUsSection from '@/components/AboutUsSection';
-import WhyChooseUs from '@/components/WhyChooseUs';
-import FAQSection from '@/components/FAQSection';
+import Approach from '@/components/Approach';
+import WhatWeDo from '@/components/WhatWeDo';
+import HowItWork from '@/components/HowWeWork';
+import Benefits from '@/components/Benefits';
+
 
 const AboutPage = () => {
   return (
@@ -11,10 +14,10 @@ const AboutPage = () => {
         backgroundImage="/Services/services-bg.jpg" 
       />
         <AboutUsSection />
-        <WhyChooseUs />
-        <FAQSection />
-
-
+        <Approach />
+        <WhatWeDo />
+        <HowItWork />
+        <Benefits />
     </main>
   );
 };
