@@ -3,14 +3,17 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const Breadcrumb = ({ title, backgroundImage }) => {
+const Breadcrumb = ({ title, backgroundImage, backgroundPosition = 'center' }) => {
   const pathname = usePathname();
   const pathSegments = pathname.split('/').filter((segment) => segment);
 
   return (
     <div
-      className="relative w-full h-[250px] flex items-center bg-cover bg-center"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+      className="relative w-full h-[250px] flex items-center bg-cover"
+      style={{ 
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundPosition: backgroundPosition 
+      }}
     >
       <div className="w-full h-full bg-black/50 absolute top-0 left-0" />
       <div className="relative z-10 px-8 md:px-36 text-white">

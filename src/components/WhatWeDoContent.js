@@ -29,15 +29,15 @@ const Work = () => {
       
       {/* Main Heading */}
       <h1 className="text-4xl font-bold text-gray-900 leading-snug mb-4">
-        Protecting, preventing, <br />
-        <span className="text-indigo-600"> securing</span> 
-        <span className="text-blue-500"> your</span>
-        <span className="text-cyan-500"> future</span>
+        Empowering Innovation, <br />
+        <span className="text-indigo-600"> Elevating </span> 
+        <span className="text-blue-500"> Digital</span>
+        <span className="text-cyan-500"> Presence</span>
       </h1>
       
       {/* Subheading */}
       <p className="text-gray-600 mb-6 text-lg">
-        We provide comprehensive cybersecurity services to safeguard your digital assets, prevent potential threats, and ensure a secure environment.
+      We offer cutting-edge digital solutions to boost your brand’s visibility, drive growth, and foster meaningful connections. 
       </p>
      
       {/* Service Features List */}
@@ -49,7 +49,7 @@ const Work = () => {
               <path d="M12 6v6l4 2"></path>
             </svg>
           }
-          text="Proactive Threat Detection and Incident Response"
+          text="Strategic Digital Transformation and Brand Positioning"
         />
         <ServiceFeatureItem 
           icon={
@@ -58,7 +58,7 @@ const Work = () => {
               <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
             </svg>
           }
-          text="Advanced Network Security and Intrusion Prevention"
+          text="Advanced Web and App Development Solutions"
         />
         <ServiceFeatureItem 
           icon={
@@ -70,37 +70,42 @@ const Work = () => {
               <line x1="14" y1="1" x2="14" y2="4"></line>
             </svg>
           }
-          text="Data Encryption and Secure Information Management"
+          text="Data-Driven Marketing and Analytics "
         />
       </div>
 
-      <div className="flex flex-wrap gap-4 md:flex-nowrap pt-4">
-  {/* Feature 1 */}
-  <div className="flex items-center gap-1">
-    <div className="w-12 h-12 flex items-center justify-center">
-      <Image 
-        src="/About_Us/5.svg" 
-        alt="Network And Firewall Security"
-        width={28}
-        height={28}
-      />
-    </div>
-    <span className="text-lg font-semibold text-gray-900">Network And Firewall Security</span>
-  </div>
+                  {/* Feature Cards */}
+                  <div className="flex flex-wrap gap-4 mb-8">
+              {/* Card 1 */}
+              <div className="flex items-center gap-4 bg-gray-50 rounded-full px-0  py-4 w-full sm:w-auto">
+                <div className="bg-gradient-to-b from-[#D376FF] to-[#5A50FF] rounded-full p-2">
+                  <Image 
+                    src="/About_Us/6.svg"
+                    alt="Proactive Threat Protection"
+                    width={24}
+                    height={24}
+                  />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#030438]">Innovative Solutions</h3>
+                </div>
+              </div>
 
-  {/* Feature 2 */}
-  <div className="flex items-center gap-1">
-    <div className="w-12 h-12 flex items-center justify-center">
-      <Image 
-        src="/About_Us/4.svg" 
-        alt="Data Protection And Encryption"
-        width={28}
-        height={28}
-      />
-    </div>
-    <span className="text-lg font-semibold text-gray-900">Data Protection And Encryption</span>
-  </div>
-</div>
+              {/* Card 2 */}
+              <div className="flex items-center gap-4 bg-gray-50 rounded-full px-4 py-3 w-full sm:w-auto">
+                <div className="bg-gradient-to-b from-[#D376FF] to-[#5A50FF] rounded-full p-2">
+                  <Image 
+                    src="/About_Us/7.svg"
+                    alt="24/7 Monitoring And Help"
+                    width={24}
+                    height={24}
+                  />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#030438]">Seamless User Experience</h3>
+                </div>
+              </div>
+            </div>
 
 
     </div>

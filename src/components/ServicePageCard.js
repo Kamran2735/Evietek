@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 
-const ServiceCard = ({ title, icon, description }) => {
+const ServiceCard = ({ title, icon, description, link }) => {
   return (
     <div className="group relative p-8 rounded-2xl shadow-lg transition-all duration-500 bg-white cursor-pointer flex flex-col justify-between min-h-[300px] overflow-hidden">
       
@@ -27,17 +28,19 @@ const ServiceCard = ({ title, icon, description }) => {
           </h3>
 
           {/* Arrow Circle - Initially Gradient, Turns White on Hover */}
-          <div className="w-10 h-10 flex items-center justify-center rounded-full 
+          <Link href={link} className="block">
+            <div className="w-10 h-10 flex items-center justify-center rounded-full 
                 bg-[#5E51FE] transition-all duration-500 
                 group-hover:bg-white">
 
-            {/* Arrow - Initially White, Turns Gradient on Hover */}
-            <span className="text-white text-lg font-bold transition-all duration-500 
-                            group-hover:text-transparent bg-clip-text 
-                            group-hover:bg-gradient-to-r group-hover:from-[#4D9FFF] group-hover:to-[#8750F7]">
-              ➜
-            </span>
-          </div>
+              {/* Arrow - Initially White, Turns Gradient on Hover */}
+              <span className="text-white text-lg font-bold transition-all duration-500 
+                              group-hover:text-transparent bg-clip-text 
+                              group-hover:bg-gradient-to-r group-hover:from-[#4D9FFF] group-hover:to-[#8750F7]">
+                ➜
+              </span>
+            </div>
+          </Link>
         </div>
 
         {/* Description - Adjusted Spacing */}

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from "next/link";
 
 const OurBenefits = () => {
   return (
@@ -21,12 +22,12 @@ const OurBenefits = () => {
             />
 
             {/* Floating Custom Circular Image (Rotating) */}
-            <div className="absolute top-10 -right-16 w-32 h-32 animate-spin-slow">
+            <div className="absolute top-10 -right-25 w-50 h-50 animate-spin-slow">
               <Image
                 src="/About_Us/circle.svg"
                 alt="Custom Circular Image"
-                width={100}
-                height={100}
+                width={150}
+                height={150}
                 className="w-full h-full object-contain"
               />
             </div>
@@ -60,14 +61,13 @@ const OurBenefits = () => {
 
             {/* Main Heading */}
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Reliable solutions for<br />
-              cybersecurity excellence
+              Reliable Solutions For<br />
+              Your Business Growth
             </h2>
 
             {/* Description */}
             <p className="text-gray-600 mb-8">
-              Our comprehensive cybersecurity solutions provide robust protection, minimizing 
-              risks and giving you peace of mind knowing your data and systems are secure.
+            Our innovative digital solutions enhance your brand's visibility, drive growth, and foster deeper connections. With our expertise, we help you stay ahead in the ever-evolving digital landscape. 
             </p>
 
             {/* Feature Cards */}
@@ -83,7 +83,7 @@ const OurBenefits = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#030438]">Proactive Threat Protection</h3>
+                  <h3 className="font-bold text-[#030438]">Tailored Growth Strategies</h3>
                 </div>
               </div>
 
@@ -98,7 +98,7 @@ const OurBenefits = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#030438]">24/7 Monitoring And Help</h3>
+                  <h3 className="font-bold text-[#030438]">24/7 Monitoring & Support</h3>
                 </div>
               </div>
             </div>
@@ -122,7 +122,7 @@ const OurBenefits = () => {
                     <polyline points="22 4 12 14.01 9 11.01"></polyline>
                   </svg>
                 </div>
-                <p className="text-gray-700">Scalable Solutions</p>
+                <p className="text-gray-700">Scalable and Flexible Solutions</p>
               </div>
               
               <div className="flex items-center gap-3">
@@ -132,11 +132,12 @@ const OurBenefits = () => {
                     <polyline points="22 4 12 14.01 9 11.01"></polyline>
                   </svg>
                 </div>
-                <p className="text-gray-700">Peace of Mind</p>
+                <p className="text-gray-700">Unmatched Customer Experience</p>
               </div>
             </div>
 
             {/* CTA Button */}
+            <Link href="/book-a-meeting" className="hidden md:block">
             <button className="bg-gradient-to-b from-[#5A50FF] to-[#D376FF] text-white font-medium py-3 px-6 rounded-full flex items-center gap-2">
               Get Started
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -145,6 +146,7 @@ const OurBenefits = () => {
                 <path d="M8 12h8"></path>
               </svg>
             </button>
+            </Link>
           </div>
         </div>
 

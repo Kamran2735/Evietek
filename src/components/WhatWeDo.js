@@ -33,7 +33,7 @@ const WhatWeDo = () => {
 
             {/* Experience Badge */}
             <div className="absolute top-[120px] right-[110px] h-[130px] w-[130px] bg-gradient-to-b from-purple-500 to-blue-500 text-white text-center p-[15px] rounded-full shadow-md flex flex-col items-center justify-center z-20">
-              <h2 className="text-[30px] font-bold mb-1">25+</h2>
+              <h2 className="text-[30px] font-bold mb-1">9+</h2>
               <p className="text-xs uppercase leading-[1.2em]">Years Of Experience</p>
             </div>
 
@@ -41,7 +41,7 @@ const WhatWeDo = () => {
             <div className="absolute right-[120px] bottom-[-40px] max-w-[200px] z-10 shadow-lg rounded-xl overflow-hidden">
               <figure className="block rounded-[20px]">
                 <Image
-                  src="/About_Us/w2.jpg"
+                  src="/About_Us/w2.webp"
                   alt="Cybersecurity Team"
                   width={200}
                   height={150}

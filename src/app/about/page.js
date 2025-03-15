@@ -10,8 +10,8 @@ const AboutPage = () => {
   return (
     <main className="bg-[#F2F2F5]">  
       <Breadcrumb 
-        title="Our Services" 
-        backgroundImage="/Services/services-bg.jpg" 
+        title="About Us" 
+        backgroundImage="/About_Us/about-bg.jpg" 
       />
         <AboutUsSection />
         <Approach />

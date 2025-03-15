@@ -43,19 +43,22 @@ export default function ServicesSection() {
             title: "Website Design", 
             description: "Creating Multipage websites for different companies.",
             icon: "/Our_Services/Website_Logo.svg",
-            decoration: "/Our_Services/Decor_1.svg"
+            decoration: "/Our_Services/Decor_1.svg",
+            link: "/services/website-design"
         },
         { 
             title: "Branding Design", 
             description: "Helping our Clients to establish an amazing brand with irresistible and strong visual elements.",
             icon: "/Our_Services/Branding_Design_Logo.svg",
-            decoration: "/Our_Services/Decor_2.svg"
+            decoration: "/Our_Services/Decor_2.svg",
+            link: "/services/branding"
         },
         { 
             title: "Marketing/Landing Page", 
             description: "Experts are available for creating fast and dope landing pages.",
             icon: "/Our_Services/Marketing_Logo.svg",
-            decoration: "/Our_Services/Decor_3.svg"
+            decoration: "/Our_Services/Decor_3.svg",
+            link: "/services/social-media-marketing"
         }
     ];
 
@@ -80,7 +83,7 @@ export default function ServicesSection() {
             {/* Services Cards Section */}
             <div className="mt-10 flex flex-wrap justify-center gap-4 lg:gap-6">
                 {services.map((service) => (
-                    <Link key={service.title} href={`/Services/${service.title.toLowerCase().replace(/\s+/g, "-")}`} passHref>
+                    <Link key={service.title} href={service.link} passHref>
                         <div className="cursor-pointer">
                             <ServiceCard 
                                 background="white"

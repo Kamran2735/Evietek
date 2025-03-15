@@ -8,7 +8,8 @@ const ServicesPage = () => {
     <main className="bg-[#F2F2F5]">  
       <Breadcrumb 
         title="Our Services" 
-        backgroundImage="/Services/services-bg.jpg" 
+        backgroundImage="/Services/service-bg.jpg"
+        backgroundPosition="center 30%" 
       />
         <ServicesSection /> 
         <WhyChooseUs />

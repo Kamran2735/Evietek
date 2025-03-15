@@ -16,12 +16,12 @@ const ImageGridWithRotatingSvg = () => {
       
       {/* Center rotating SVG */}
       <div className="absolute z-10 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <div className="w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center animate-spin-slow">
+        <div className="w-30 h-30 md:w-50 md:h-50 rounded-full flex items-center justify-center animate-spin-slow">
           <Image 
             src="/About_Us/circle.svg"
             alt="Cybersecurity badge" 
-            width={128}
-            height={128}
+            width={150}
+            height={150}
             className="w-full h-full"
           />
         </div>

@@ -36,14 +36,14 @@ const WhyChooseUs = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="w-full md:w-1/2 flex justify-center relative group"
+            className="w-full md:w-1/2 flex left-70 relative group"
           >
             <div className="relative overflow-hidden rounded-lg">
               <Image
-                src="/Why_Choose_Us/why-choose-image.jpg"
+                src="/Why_Choose_Us/1.jpg"
                 alt="Why Choose Us"
-                width={450}
-                height={350}
+                width={400}
+                height={300}
                 className="rounded-lg"
               />
               {/* White Overlay Effect */}

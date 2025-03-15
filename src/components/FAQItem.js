@@ -25,7 +25,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
       </div>
 
       {/* Separator Line (Visible When Open) */}
-      {isOpen && <div className="h-[1px] bg-white opacity-50 mx-8"></div>}
+      {isOpen && <div className="h-[1px] bg-white opacity-50 mx-8 mb-4"></div>}
 
       {/* Answer (Expands/Collapses) */}
       <motion.div

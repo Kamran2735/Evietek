@@ -24,8 +24,8 @@ const HowItWork = () => {
             
             {/* Main Heading */}
             <h2 className="text-4xl font-bold mb-10 text-white-900">
-              Streamlined process,<br />
-              cyber <span className="text-indigo-500">protection</span> <span className="text-blue-400">security</span>
+            Streamlined Process,<br />
+            <span className="text-[#CB73FE]">Crafting</span>  <span className="text-indigo-400">Digital</span> <span className="text-blue-400">Transformation </span><span className="text-cyan-400"> Excellence.</span>
             </h2>
             
             {/* Process Steps */}
@@ -35,23 +35,22 @@ const HowItWork = () => {
 
               
               {/* Step 1 */}
-              <div className="flex mb-14 relative">
+              <div className="flex mb-10 relative">
                 <div className="flex-shrink-0">
                   <div className="flex items-center justify-center w-15 h-15 bg-gradient-to-b from-[#5A50FF] to-[#D376FF] rounded-full text-white font-bold text-xl">
                     01
                   </div>
                 </div>
                 <div className="ml-6">
-                  <h3 className="text-xl font-bold mb-2 text-[#CB73FE]">Assessment & Planning</h3>
+                  <h3 className="text-xl font-bold mb-2 text-[#CB73FE]">Assessment & Strategy</h3>
                   <p className="text-white-600">
-                    We start by understand your unique needs potential risks Through 
-                    detailed assessment we identify vulnerabilities and develop.
+                  We begin by understanding your business goals and identifying growth opportunities through in-depth analysis and strategic planning. 
                   </p>
                 </div>
               </div>
               
               {/* Step 2 */}
-              <div className="flex mb-14 relative">
+              <div className="flex mb-10 relative">
                 <div className="flex-shrink-0">
                   <div className="flex items-center justify-center w-15 h-15 bg-gradient-to-b from-[#5A50FF] to-[#D376FF] rounded-full text-white font-bold text-xl">
                     02
@@ -60,8 +59,7 @@ const HowItWork = () => {
                 <div className="ml-6">
                   <h3 className="text-xl font-bold mb-2 text-[#CB73FE]">Implementation</h3>
                   <p className="text-white-600">
-                    We start by understand your unique needs potential risks Through 
-                    detailed assessment we identify vulnerabilities and develop.
+                  Our expert team executes innovative digital solutions, leveraging technology to enhance visibility and drive results.
                   </p>
                 </div>
               </div>
@@ -74,10 +72,9 @@ const HowItWork = () => {
                   </div>
                 </div>
                 <div className="ml-6">
-                  <h3 className="text-xl font-bold mb-2 text-[#CB73FE]">Ongoing Support & Maintenance</h3>
+                  <h3 className="text-xl font-bold mb-2 text-[#CB73FE]">Ongoing Support & Optimization</h3>
                   <p className="text-white-600">
-                    We start by understand your unique needs potential risks Through 
-                    detailed assessment we identify vulnerabilities and develop.
+                  We continuously monitor performance, provide maintenance, and refine strategies to ensure sustained success. 
                   </p>
                 </div>
               </div>
@@ -89,7 +86,7 @@ const HowItWork = () => {
             {/* Main Background Image */}
             <div className="relative rounded-2xl left-40 overflow-hidden ">
               <Image
-                src="/About_Us/h1.jpg"
+                src="/About_Us/h1.webp"
                 alt="Security team working"
                 width={200}
                 height={300}
