@@ -54,8 +54,8 @@ export default function ServicesSection() {
             link: "/services/branding"
         },
         { 
-            title: "Marketing/Landing Page", 
-            description: "Experts are available for creating fast and dope landing pages.",
+            title: "Social Media Marketing", 
+            description: "We help you to grow your brand on social media platforms.",
             icon: "/Our_Services/Marketing_Logo.svg",
             decoration: "/Our_Services/Decor_3.svg",
             link: "/services/social-media-marketing"

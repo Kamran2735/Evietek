@@ -30,15 +30,15 @@ const faqs = [
 
 const ContentWritingServicePage = () => {
   const images = [
-    { src: '/Services/Web/hero1.jpg', alt: 'Web Design' },
-    { src: '/Services/Web/hero2.jpg', alt: 'Web Design' }
+    { src: '/Services/Illustration/hero1.jpg', alt: 'Illustration' },
+    { src: '/Services/Illustration/hero1.png', alt: 'Illustration' }
   ];
 
   return (
     <main className="bg-[#F2F2F5]">  
       <Breadcrumb 
         title="Illustrations" 
-        backgroundImage="/Services/Web/bg.jpg"
+        backgroundImage="/Services/Illustration/bg.jpeg"
         backgroundPosition="center 60%" 
       />
       
@@ -119,7 +119,7 @@ With imagination and accuracy, our team of skilled illustrators can materialize 
                 }
               ]}
               bottomImage={{
-                src: "/Services/Web/image.png",
+                src: "/Services/Illustration/image.jpg",
                 alt: "Web Designer working",
                 width: 400,
                 height: 300

@@ -71,7 +71,7 @@ export default function AboutContent() {
           whileInView="animate"
           viewport={{ once: true, amount: 0.2 }}
         >
-          Helping Brands Grow Better Since 2016
+          Helping Brands Grow Better Since 2020
         </motion.h2>
 
         {/* Body text with Gilroy-Medium and Updated Color */}

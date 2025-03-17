@@ -71,7 +71,7 @@ const ServiceSidebar = () => {
   const pathname = usePathname();
 
   return (
-  <div className="bg-[#030438] rounded-tr-lg rounded-br-lg shadow-md p-6 h-full sticky top-4">
+    <div className="hidden lg:block bg-[#030438] rounded-tr-lg rounded-br-lg shadow-md p-6 h-full sticky top-4">
       <h3 className="text-xl font-bold text-white-900 mb-6 border-b pb-4">
         Our Services
       </h3>

@@ -31,15 +31,15 @@ const faqs = [
 
 const SocialMediaMarketingServicePage = () => {
   const images = [
-    { src: '/Our_Services/Web/hero1.jpg', alt: 'Team collaborating on project' },
-    { src: '/Our_Services/Web/hero2.jpg', alt: 'Data analysis dashboard' }
+    { src: '/Services/Social/hero1.webp', alt: 'SMM' },
+    { src: '/Services/Social/hero2.jpg', alt: 'SMM' }
   ];
 
   return (
     <main className="bg-[#F2F2F5]">  
       <Breadcrumb 
         title="Social Media Marketing" 
-        backgroundImage="/Services/services-bg.jpg" 
+        backgroundImage="/Services/Social/bg.jpg" 
       />
       
       <div className="flex flex-col lg:flex-row">
@@ -49,9 +49,9 @@ const SocialMediaMarketingServicePage = () => {
         </div>
 
         {/* Main Content */}
-        <div className="lg:w-3/4 px-4 lg:px-8 py-10">
+        <div className="lg:w-3/4 px-4 lg:px-8 py-4">
           {/* Carousel Section */}
-          <div className="mb-12">
+          <div className="mb-4">
             <div className="max-w-4xl mx-auto">
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <Carousel images={images} />
@@ -60,7 +60,7 @@ const SocialMediaMarketingServicePage = () => {
           </div>
 
           {/* Title and Description Section */}
-          <div className="mb-4 px-12">
+          <div className="mb-0 px-12">
             <p className="text-gray-600 leading-relaxed">
               In today's digital world, social media marketing is essential for any business. At Evietek, we know that effective social media strategies can significantly enhance your brand's visibility and customer engagement. For instance, a local coffee shop can attract new customers by sharing enticing photos of their latest brews on Instagram. By leveraging social media, businesses can connect with their audience in meaningful ways. 
 
@@ -69,7 +69,7 @@ const SocialMediaMarketingServicePage = () => {
           </div>
 
           {/* Why Choose Section */}
-          <div className="mb-4">
+          <div className="mb-0">
             <WhyChoose
               heading="Why Choose Social Media Marketing Services"
               description="Evietek's Social Media Marketing solutions are designed to elevate your brand, enhance engagement, and drive growth across all platforms. Through data-driven strategies and creative content, we help you build a loyal online community and achieve measurable results."
@@ -100,7 +100,7 @@ const SocialMediaMarketingServicePage = () => {
           </div>
 
           {/* Features Section */}
-          <div className="mb-4">
+          <div className="mb-0">
             <Feature
               heading="Features of Social Media Marketing Services"
               description="Evietek's Social Media Marketing solutions offer advanced strategies, real-time analytics, and user-friendly tools to enhance your brand's online presence and engagement."
@@ -122,9 +122,9 @@ const SocialMediaMarketingServicePage = () => {
                 }
               ]}
               bottomImage={{
-                src: "/Our_Services/Web/img.jpg",
-                alt: "Security team working",
-                width: 400,
+                src: "/Services/Social/image.jpeg",
+                alt: "Social Media Globe",
+                width: 300,
                 height: 300
               }}
               bottomDescription="Our solutions provide targeted marketing strategies, creative content, and consistent brand messaging to drive growth and customer loyalty."
@@ -138,7 +138,7 @@ const SocialMediaMarketingServicePage = () => {
           </div>
 
           {/* FAQ Section */}
-          <div className="mb-4 px-12">
+          <div className="mb-0 px-12">
             <h2 className="text-3xl font-bold text-[#030438] mb-8">
               Frequently Asked Questions
             </h2>

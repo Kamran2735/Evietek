@@ -21,16 +21,16 @@ const faqs = [
 
 const ContentWritingServicePage = () => {
   const images = [
-    { src: '/Services/Web/hero1.jpg', alt: 'Web Design' },
-    { src: '/Services/Web/hero2.jpg', alt: 'Web Design' }
+    { src: '/Services/CW/hero1.jpg', alt: 'Content Writing' },
+    { src: '/Services/CW/hero2.jpg', alt: 'Content Writing' }
   ];
 
   return (
     <main className="bg-[#F2F2F5]">  
       <Breadcrumb 
         title="Content Writing" 
-        backgroundImage="/Services/Web/bg.jpg"
-        backgroundPosition="center 60%" 
+        backgroundImage="/Services/CW/bg.png"
+        backgroundPosition="center 50%" 
       />
       
       <div className="flex flex-col lg:flex-row">
@@ -40,9 +40,9 @@ const ContentWritingServicePage = () => {
         </div>
 
         {/* Main Content */}
-        <div className="lg:w-3/4 px-4 lg:px-8 py-10">
+        <div className="lg:w-3/4 px-4 lg:px-8 py-4">
           {/* Carousel Section */}
-          <div className="mb-12">
+          <div className="mb-4">
             <div className="max-w-4xl mx-auto">
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <Carousel images={images} />
@@ -51,7 +51,7 @@ const ContentWritingServicePage = () => {
           </div>
 
           {/* Title and Description Section */}
-          <div className="mb-4 px-12">
+          <div className="mb-0 px-12">
 
             <p className="text-gray-600 leading-relaxed">
             At Evietek, we know that great content drives results. Whether it’s making your brand stand out in a crowded digital space or engaging your audience with information they can’t ignore, quality content is the foundation of success. Content writing services give your business the boost it needs by delivering compelling words that resonate. These services are designed to elevate your online presence by aligning your message with your audience's expectations.  
@@ -61,7 +61,7 @@ We can assist you in reaching your marketing objectives and developing a stronge
           </div>
 
           {/* Why Choose Section */}
-          <div className="mb-4">
+          <div className="mb-0">
             <WhyChoose
               heading="Why Choose Content Writing Services"
               description="Evietek’s expert content writing services enhance your brand’s voice and online presence. Helping you reach your audience with interesting and useful content is our team of professional writers' specialty. Allow us to elevate your brand through high-quality, customized content that drives results. "
@@ -88,7 +88,7 @@ We can assist you in reaching your marketing objectives and developing a stronge
           </div>
 
           {/* Features Section */}
-          <div className="mb-4">
+          <div className="mb-0">
             <Feature
               heading="Feature of Content Writing Services"
               description="Evietek’s content writing services are crafted to engage, inform and drive conversions. Our experienced writers specialize in producing compelling, SEO-friendly content that appeals to your target audience. Allow us to assist you in increasing your brand's online visibility and achieving your marketing objectives."
@@ -107,7 +107,7 @@ We can assist you in reaching your marketing objectives and developing a stronge
                 }
               ]}
               bottomImage={{
-                src: "/Services/Web/image.png",
+                src: "/Services/CW/image.png",
                 alt: "Web Designer working",
                 width: 400,
                 height: 300
@@ -123,7 +123,7 @@ We can assist you in reaching your marketing objectives and developing a stronge
           </div>
 
           {/* FAQ Section */}
-          <div className="mb-4 px-12">
+            <div className="mb-0 px-12">
             <h2 className="text-3xl font-bold text-[#030438] mb-8">
               Frequently Asked Questions
             </h2>

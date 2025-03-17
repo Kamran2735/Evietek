@@ -31,15 +31,16 @@ const faqs = [
 
 const BrandingServicePage = () => {
   const images = [
-    { src: '/Our_Services/Web/hero1.jpg', alt: 'Team collaborating on project' },
-    { src: '/Our_Services/Web/hero2.jpg', alt: 'Data analysis dashboard' }
+    { src: '/Services/Branding/hero1.png', alt: 'Branding' },
+    { src: '/Services/Branding/hero2.jpg', alt: 'Bradning' }
   ];
 
   return (
     <main className="bg-[#F2F2F5]">  
       <Breadcrumb 
         title="Branding" 
-        backgroundImage="/Services/services-bg.jpg" 
+        backgroundImage="/Services/Branding/bg.jpeg" 
+        backgroundPosition="center 52%" 
       />
       
       <div className="flex flex-col lg:flex-row">
@@ -49,9 +50,9 @@ const BrandingServicePage = () => {
         </div>
 
         {/* Main Content */}
-        <div className="lg:w-3/4 px-4 lg:px-8 py-10">
+        <div className="lg:w-3/4 px-4 sm:px-6 md:px-8 py-8 sm:py-4">
           {/* Carousel Section */}
-          <div className="mb-12">
+          <div className="mb-4 sm:mb-4">
             <div className="max-w-4xl mx-auto">
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <Carousel images={images} />
@@ -60,14 +61,14 @@ const BrandingServicePage = () => {
           </div>
 
           {/* Title and Description Section */}
-          <div className="mb-4 px-12">
-            <p className="text-gray-600 leading-relaxed">
+          <div className="mb-0 sm:mb-0 px-4 sm:px-8 md:px-12">
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
               In today's competitive market, effective branding is essential for success. At Evietek, we understand that strong branding builds recognition and trust among customers. For instance, think about how instantly recognizable the golden arches of McDonald's are. That's the power of branding. Our branding services are designed to help your business create a memorable identity that resonates with your target audience. 
             </p>
           </div>
 
           {/* Why Choose Section */}
-          <div className="mb-4">
+          <div className="mb-0 sm:mb-0">
             <WhyChoose
               heading="Why Choose Evietek For Branding Services"
               description="Evietek's branding solutions are designed to establish a unique identity for your business, enhance brand recognition, and build lasting customer relationships."
@@ -98,7 +99,7 @@ const BrandingServicePage = () => {
           </div>
 
           {/* Features Section */}
-          <div className="mb-4">
+          <div className="mb-0 sm:mb-0">
             <Feature
               heading="Feature of Branding Design Services"
               description="Experience strategic brand development, creative design, and seamless integration for a powerful and memorable brand identity."
@@ -120,8 +121,8 @@ const BrandingServicePage = () => {
                 }
               ]}
               bottomImage={{
-                src: "/Our_Services/Web/img.jpg",
-                alt: "Security team working",
+                src: "/Services/Branding/image.png",
+                alt: "Brand Illustration",
                 width: 400,
                 height: 300
               }}
@@ -136,8 +137,8 @@ const BrandingServicePage = () => {
           </div>
 
           {/* FAQ Section */}
-          <div className="mb-4 px-12">
-            <h2 className="text-3xl font-bold text-[#030438] mb-8">
+            <div className="mb-0 sm:mb-0 px-4 sm:px-8 md:px-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#030438] mb-6 sm:mb-8">
               Frequently Asked Questions
             </h2>
             <ServiceFAQ faqs={faqs} className="w-full" />

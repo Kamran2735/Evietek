@@ -13,15 +13,22 @@ const ServiceFAQ = ({ faqs, className = "w-full md:w-1/2" }) => {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className={`${className} space-y-4`}
+      className={`${className} space-y-3 sm:space-y-4 lg:space-y-5`}
     >
       {faqs.map((faq, index) => (
-        <FAQItem
+        <motion.div
           key={index}
-          {...faq}
-          isOpen={openIndex === index}
-          onClick={() => setOpenIndex(openIndex === index ? null : index)}
-        />
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          viewport={{ once: true }}
+        >
+          <FAQItem
+            {...faq}
+            isOpen={openIndex === index}
+            onClick={() => setOpenIndex(openIndex === index ? null : index)}
+          />
+        </motion.div>
       ))}
     </motion.div>
   );

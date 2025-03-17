@@ -50,9 +50,9 @@ const WebDesignServicePage = () => {
         </div>
 
         {/* Main Content */}
-        <div className="lg:w-3/4 px-4 lg:px-8 py-10">
+        <div className="lg:w-3/4 px-4 lg:px-8 py-4">
           {/* Carousel Section */}
-          <div className="mb-12">
+          <div className="mb-4">
             <div className="max-w-4xl mx-auto">
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <Carousel images={images} />
@@ -61,7 +61,7 @@ const WebDesignServicePage = () => {
           </div>
 
           {/* Title and Description Section */}
-          <div className="mb-4 px-12">
+          <div className="mb-0 px-12">
             <h2 className="text-4xl md:text-5xl font-bold text-[#030438] mb-4">
               Pioneering Excellence in Website Design
             </h2>
@@ -72,7 +72,7 @@ const WebDesignServicePage = () => {
           </div>
 
           {/* Why Choose Section */}
-          <div className="mb-4">
+          <div className="mb-0">
             <WhyChoose
               heading="Why Choose Evietek's Website Design Services"
               description="Evietek crafts exceptional digital experiences that captivate audiences and drive conversions. By combining creativity, functionality, and cutting-edge technology, we deliver bespoke website designs that enhance your brand identity and foster user engagement."
@@ -99,7 +99,7 @@ const WebDesignServicePage = () => {
           </div>
 
           {/* Features Section */}
-          <div className="mb-4">
+          <div className="mb-0">
             <Feature
               heading="Feature of Website Design Services"
               description="Delivering innovative, user-centric designs with cutting-edge functionality to enhance your brand's online presence and drive engagement."
@@ -137,7 +137,7 @@ const WebDesignServicePage = () => {
           </div>
 
           {/* FAQ Section */}
-          <div className="mb-4 px-12">
+          <div className="mb-0 px-12">
             <h2 className="text-3xl font-bold text-[#030438] mb-8">
               Frequently Asked Questions
             </h2>
