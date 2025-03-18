@@ -9,33 +9,33 @@ import Breadcrumb from '@/components/BreadCrumb';
 const projects = [
   {
     id: 1,
-    title: "Zonaris",
-    category: "web",
-    description: "A full-stack e-commerce solution with real-time inventory management",
+    title: "Illustration",
+    category: "design",
+    description: "A collection of illustrations created by our talented design team",
     image: "/portfolio/ecommerce.png",
     color: "#FF6B6B",
-    skills: ["React", "Node.js", "MongoDB"],
-    link: "#"
+    skills: ["Digital Painting,Character Design,Vector Illustration"],
+    link: "https://www.behance.net/gallery/221656995/Illustrations"
   },
   {
     id: 2,
-    title: "Mobile App Design",
+    title: "Branding",
     category: "design",
-    description: "UI/UX design for a fitness tracking mobile application",
+    description: "A collection of branding projects created by our talented design team",
     image: "/portfolio/fitness.png",
     color: "#4ECDC4",
-    skills: ["Figma", "UI/UX", "Prototyping"],
-    link: "#"
+    skills: ["Brand Identity, Marketing Strategy,Visual Identity"],
+    link: "https://www.behance.net/gallery/191328457/Branding"
   },
   {
     id: 3,
-    title: "Brand Identity",
+    title: "Logo Design",
     category: "design",
-    description: "Complete brand identity design for a tech startup",
+    description: "A collection of logo design projects created by our talented design team",
     image: "/portfolio/brand.png",
     color: "#A78BFA",
-    skills: ["Logo Design", "Branding", "Typography"],
-    link: "#"
+    skills: ["Vector Illustration, Brand Identity,Typography"],
+    link: "https://www.behance.net/gallery/191322361/Logos"
   },
 ];
 
