@@ -31,16 +31,16 @@ const faqs = [
 
 const VideoEditingServicePage = () => {
   const images = [
-    { src: '/Services/Video Editing/hero1.png', alt: 'Video Editing' },
-    { src: '/Services/Video Editing/hero2.png', alt: 'Video Editing' }
+    { src: '/Services/Video/hero1.jpg', alt: 'Video Editing' },
+    { src: '/Services/Video/hero2.webp', alt: 'Video Editing' }
   ];
 
   return (
     <main className="bg-[#F2F2F5]">  
       <Breadcrumb 
         title="Video Editing" 
-        backgroundImage="/Services/Video Editing/bg.jpeg" 
-        backgroundPosition="center 52%" 
+        backgroundImage="/Services/Video/bg.jpg" 
+        backgroundPosition="center 40%" 
       />
       
       <div className="flex flex-col lg:flex-row">
@@ -124,7 +124,7 @@ const VideoEditingServicePage = () => {
                 }
               ]}
               bottomImage={{
-                src: "/Services/Video Editing/image.png",
+                src: "/Services/Video/image.png",
                 alt: "Video Editing Illustration",
                 width: 400,
                 height: 300

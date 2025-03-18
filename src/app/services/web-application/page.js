@@ -31,15 +31,15 @@ const faqs = [
 
 const WebApplicationServicePage = () => {
   const images = [
-    { src: '/Services/Web Application/hero1.png', alt: 'Web Application' },
-    { src: '/Services/Web Application/hero2.png', alt: 'Web Application' }
+    { src: '/Services/Web-App/hero1.jpg', alt: 'Web Application' },
+    { src: '/Services/Web-App/hero2.jpg', alt: 'Web Application' }
   ];
 
   return (
     <main className="bg-[#F2F2F5]">  
       <Breadcrumb 
         title="Web Application" 
-        backgroundImage="/Services/Web Application/bg.jpeg" 
+        backgroundImage="/Services/Web-App/bg.jpg" 
         backgroundPosition="center 52%" 
       />
       
@@ -124,8 +124,8 @@ const WebApplicationServicePage = () => {
                 }
               ]}
               bottomImage={{
-                src: "/Services/Web Application/image.png",
-                alt: "Web Application Illustration",
+                src: "/Services/Web-App/image.jpg",
+                alt: "Web Application Process",
                 width: 400,
                 height: 300
               }}

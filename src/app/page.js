@@ -8,6 +8,10 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import JoinUSSection from "@/components/JoinUsSection";
 import TrustedClients from "@/components/TrustedClientsSection";
 
+export const metadata = {
+  title: 'Evietek - Your Digital Innovation Partner',
+};
+
 export default function Home() {
   return (
     <>

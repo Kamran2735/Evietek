@@ -31,16 +31,16 @@ const faqs = [
 
 const WebDevelopmentServicePage = () => {
   const images = [
-    { src: '/Services/Web Development/hero1.png', alt: 'Web Development' },
-    { src: '/Services/Web Development/hero2.png', alt: 'Web Development' }
+    { src: '/Services/Web-Dev/hero1.png', alt: 'Web Development' },
+    { src: '/Services/Web-Dev/hero2.webp', alt: 'Web Development' }
   ];
 
   return (
     <main className="bg-[#F2F2F5]">  
       <Breadcrumb 
         title="Web Development" 
-        backgroundImage="/Services/Web Development/bg.jpeg" 
-        backgroundPosition="center 52%" 
+        backgroundImage="/Services/Web-Dev/bg.jpeg" 
+        backgroundPosition="center 0%" 
       />
       
       <div className="flex flex-col lg:flex-row">
@@ -124,7 +124,7 @@ const WebDevelopmentServicePage = () => {
                 }
               ]}
               bottomImage={{
-                src: "/Services/Web Development/image.png",
+                src: "/Services/Web-Dev/image.webp",
                 alt: "Web Development Illustration",
                 width: 400,
                 height: 300

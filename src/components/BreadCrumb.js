@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const Breadcrumb = ({ title, backgroundImage, backgroundPosition = 'center' }) => {
+const Breadcrumb = ({ title, backgroundImage, backgroundPosition = 'center', textColor = 'white' }) => {
   const pathname = usePathname();
   const pathSegments = pathname.split('/').filter((segment) => segment);
 
@@ -16,7 +16,7 @@ const Breadcrumb = ({ title, backgroundImage, backgroundPosition = 'center' }) =
       }}
     >
       <div className="w-full h-full bg-black/50 absolute top-0 left-0" />
-      <div className="relative z-10 px-8 md:px-36 text-white flex flex-col justify-center h-full">
+      <div className="relative z-10 px-8 md:px-36 flex flex-col justify-center h-full" style={{ color: textColor }}>
         <h1 className="text-3xl md:text-4xl font-bold">{title}</h1>
         <nav className="text-xs md:text-sm mt-2">
           <ol className="flex items-center space-x-2">
@@ -33,7 +33,7 @@ const Breadcrumb = ({ title, backgroundImage, backgroundPosition = 'center' }) =
                 <li key={href} className="flex items-center space-x-2">
                   <span className="text-gray-400">/</span>
                   {isLast ? (
-                    <span className="text-white font-semibold capitalize">
+                    <span className="font-semibold capitalize">
                       {segment.replace(/-/g, ' ')}
                     </span>
                   ) : (
