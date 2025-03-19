@@ -29,12 +29,16 @@ export default function Footer() {
             <span className="hidden sm:inline text-base sm:text-sm md:text-base lg:text-xl">LinkedIn</span>
           </a>
           <a href="#" className="flex items-center space-x-3">
-            <Image src="/Footer/dribble.svg" alt="Dribble" width={24} height={24} className="w-6 h-6 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
+            <Image src="/Footer/Dribble.svg" alt="Dribble" width={24} height={24} className="w-6 h-6 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
             <span className="hidden sm:inline text-base sm:text-sm md:text-base lg:text-xl">Dribbble</span>
           </a>
           <a href="#" className="flex items-center space-x-3">
             <Image src="/Footer/instagram.svg" alt="Instagram" width={24} height={24} className="w-6 h-6 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
             <span className="hidden sm:inline text-base sm:text-sm md:text-base lg:text-xl">Instagram</span>
+          </a>
+          <a href="https://www.facebook.com/evietek" className="flex items-center space-x-3">
+            <Image src="/Footer/facebook.svg" alt="Facebook" width={24} height={24} className="w-6 h-6 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
+            <span className="hidden sm:inline text-base sm:text-sm md:text-base lg:text-xl">Facebook</span>
           </a>
         </div>
       </div>

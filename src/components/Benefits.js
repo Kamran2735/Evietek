@@ -127,15 +127,19 @@ const OurBenefits = () => {
             {/* Main Image */}
             <motion.div
               variants={imageVariants}
-              className="relative w-full"
+              className="relative w-full overflow-hidden group"
             >
-              <Image
-                src="/About_Us/b1.jpg"
-                alt="Cybersecurity team working"
-                width={700}
-                height={600}
-                className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[620px] object-cover rounded-r-lg"
-              />
+              <div className="relative">
+                <Image
+                  src="/About_Us/b1.jpg"
+                  alt="Cybersecurity team working"
+                  width={700}
+                  height={600}
+                  className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[620px] object-cover rounded-r-lg transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transform scale-0 
+                              transition-all duration-700 origin-center rotate-45 group-hover:scale-[2]" />
+              </div>
             </motion.div>
 
             {/* Floating Custom Circular Image (Rotating) */}
@@ -161,16 +165,20 @@ const OurBenefits = () => {
 
             {/* Floating Image Box */}
             <motion.div 
-              className="absolute bottom-2  md:bottom-4 lg:bottom-8 right-2 md:right-4 lg:-right-16 w-36 sm:w-48 md:w-64 h-36 sm:h-48 md:h-64 rounded-2xl overflow-hidden border-4 sm:border-8 border-white shadow-lg"
+              className="absolute bottom-2 md:bottom-4 lg:bottom-8 right-2 md:right-4 lg:-right-16 w-36 sm:w-48 md:w-64 h-36 sm:h-48 md:h-64 rounded-2xl overflow-hidden border-4 sm:border-8 border-white shadow-lg group"
               variants={floatingImageVariants}
             >
-              <Image
-                src="/About_Us/b2.jpg"
-                alt="Cybersecurity experts"
-                width={300}
-                height={300}
-                className="w-full h-full object-cover"
-              />
+              <div className="relative w-full h-full">
+                <Image
+                  src="/About_Us/b2.jpg"
+                  alt="Cybersecurity experts"
+                  width={300}
+                  height={300}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transform scale-0 
+                              transition-all duration-700 origin-center rotate-45 group-hover:scale-[2]" />
+              </div>
             </motion.div>
           </div>
         </motion.div>
@@ -186,13 +194,12 @@ const OurBenefits = () => {
               className="flex items-center gap-2 mb-3 sm:mb-4"
               variants={titleVariants}
             >
-              <div className="text-indigo-600">
+              <div className="text-[#51328F]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" className="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                 </svg>
               </div>
-              <p className="text-indigo-600 font-medium tracking-wide uppercase text-xs sm:text-sm md:text-base">OUR BENEFITS</p>
+              <p className="text-[#51328F] font-medium tracking-wide uppercase text-xs sm:text-sm md:text-base">OUR BENEFITS</p>
             </motion.div>
 
             {/* Main Heading */}
@@ -262,10 +269,11 @@ const OurBenefits = () => {
                 variants={featureItemVariants}
                 custom={0}
               >
-                <div className="text-indigo-600">
+                <div className="text-[#51328F]">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" className="sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <line x1="5" y1="12" x2="19" y2="12"/>
                   </svg>
                 </div>
                 <p className="text-gray-700 text-xs sm:text-sm md:text-base">Enhanced Business Continuity</p>
@@ -276,10 +284,12 @@ const OurBenefits = () => {
                 variants={featureItemVariants}
                 custom={1}
               >
-                <div className="text-indigo-600">
+                <div className="text-[#51328F]">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" className="sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                    <path d="M2 8c0-2.2.7-4.3 2-6"/>
+                    <path d="M22 8a10 10 0 0 0-2-6"/>
                   </svg>
                 </div>
                 <p className="text-gray-700 text-xs sm:text-sm md:text-base">Scalable and Flexible Solutions</p>
@@ -290,10 +300,9 @@ const OurBenefits = () => {
                 variants={featureItemVariants}
                 custom={2}
               >
-                <div className="text-indigo-600">
+                <div className="text-[#51328F]">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" className="sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
                   </svg>
                 </div>
                 <p className="text-gray-700 text-xs sm:text-sm md:text-base">Unmatched Customer Experience</p>
@@ -310,9 +319,8 @@ const OurBenefits = () => {
               >
                 Get Started
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M12 16l4-4-4-4"></path>
-                  <path d="M8 12h8"></path>
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
                 </svg>
               </motion.button>
             </Link>

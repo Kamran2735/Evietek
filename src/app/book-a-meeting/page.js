@@ -40,7 +40,8 @@ const BookaMeetingPage = () => {
       {/* Breadcrumb */}
       <Breadcrumb 
         title="Book a Meeting" 
-        backgroundImage="/Services/services-bg.jpg" 
+        backgroundImage="/Meeting/bg.jpg" 
+        backgroundPosition="center 70%"
       />
 
       <div className="flex flex-col items-center text-center">

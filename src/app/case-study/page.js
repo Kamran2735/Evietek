@@ -10,7 +10,7 @@ const caseStudies = [
     tag: 'Product Design',
     heading: 'Empowering Access to Fresh Produce: Building a Mobile App for Source.ag',
     content: 'Source.ag is an Amsterdam-based agtech startup that is revolutionizing access to fresh produce using cutting-edge AI-powered greenhouses. By enabling efficient operations for growers through pioneering technology...',
-    image: '/case_study/1.svg',
+    image: '/case_study/kayna.png',
     imagePosition: 'right',
     bgColor: 'bg-[#51328F]',
     tagColor: 'bg-[#5E51FE] text-white-800',
@@ -37,6 +37,7 @@ const caseStudies = [
 
 const CaseStudyPage = () => {
   return (
+    <main className="bg-[#F2F2F5]">  
     <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -80,6 +81,7 @@ const CaseStudyPage = () => {
         </div>
       </section>
     </motion.div>
+    </main>
   );
 };
 

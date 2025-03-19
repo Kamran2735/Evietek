@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-[#030438] text-white h-[70vh] md:h-[80vh] flex flex-col items-center justify-between text-center px-6 md:px-12 pt-20 md:pt-8 pb-0 overflow-hidden">
+    <section className="relative bg-[#030438] text-white h-[50vh] md:h-[80vh] flex flex-col items-center justify-between text-center px-6 md:px-12 pt-20 md:pt-8 pb-0 overflow-hidden">
       {/* Background Grid SVG - Covers Full Width */}
       <div className="absolute inset-0 w-full h-full">
         <svg className="absolute inset-0 w-full h-full opacity-50 pointer-events-none brightness-110 mix-blend-screen" xmlns="http://www.w3.org/2000/svg">

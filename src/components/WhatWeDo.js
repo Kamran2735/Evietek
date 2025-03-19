@@ -78,14 +78,18 @@ const WhatWeDo = () => {
               <div className="absolute -top-4 -left-4 w-full h-full lg:h-100 xl:h-90 2xl:h-full bg-gradient-to-b from-[#5A50FF] to-[#D376FF] rounded-[30px] z-0"></div>
 
               {/* Main Image */}
-              <figure className="relative block rounded-[30px] overflow-hidden shadow-lg z-10">
-                <Image
-                  src="/About_Us/w1.jpg"
-                  alt="Experts Working"
-                  width={550}
-                  height={450}
-                  className="w-full h-auto object-cover rounded-[30px]"
-                />
+              <figure className="relative block rounded-[30px] overflow-hidden shadow-lg z-10 group">
+                <div className="relative">
+                  <Image
+                    src="/About_Us/w1.jpg"
+                    alt="Experts Working"
+                    width={550}
+                    height={450}
+                    className="w-full h-auto object-cover rounded-[30px] transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transform scale-0 
+                                transition-all duration-700 origin-center rotate-45 group-hover:scale-[2]" />
+                </div>
               </figure>
             </div>
 
@@ -100,17 +104,21 @@ const WhatWeDo = () => {
 
             {/* Small Overlapping Image */}
             <motion.div 
-              className="absolute right-[15%] lg:right-[10px] xl:right-[90px] bottom-[-40px] lg:bottom-[60px] xl:bottom-[-50px] max-w-[200px] z-10 shadow-lg rounded-xl overflow-hidden"
+              className="absolute right-[15%] lg:right-[10px] xl:right-[90px] bottom-[-40px] lg:bottom-[60px] xl:bottom-[-50px] max-w-[200px] z-10 shadow-lg rounded-xl overflow-hidden group"
               variants={smallImageVariants}
             >
-              <figure className="block rounded-[20px]">
-                <Image
-                  src="/About_Us/w2.webp"
-                  alt="Cybersecurity Team"
-                  width={200}
-                  height={150}
-                  className="w-full object-cover aspect-[1/0.68] rounded-[20px]"
-                />
+              <figure className="block rounded-[20px] relative">
+                <div className="relative">
+                  <Image
+                    src="/About_Us/w2.webp"
+                    alt="Cybersecurity Team"
+                    width={200}
+                    height={150}
+                    className="w-full object-cover aspect-[1/0.68] rounded-[20px] transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transform scale-0 
+                                transition-all duration-700 origin-center rotate-45 group-hover:scale-[2]" />
+                </div>
               </figure>
             </motion.div>
           </motion.div>

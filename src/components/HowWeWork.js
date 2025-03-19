@@ -178,31 +178,37 @@ const HowItWork = () => {
           >
             {/* Main Background Image */}
             <motion.div 
-              className="relative rounded-2xl lg:left-40 overflow-hidden"
+              className="relative rounded-2xl lg:left-40 overflow-hidden group"
               variants={imageVariants}
             >
-              <Image
-                src="/About_Us/h1.webp"
-                alt="Security team working"
-                width={200}
-                height={300}
-                className="w-full object-cover h-[400px] md:h-[400px] lg:h-[500px]"
-              />
+              <div className="relative">
+                <Image
+                  src="/About_Us/h1.webp"
+                  alt="Security team working"
+                  width={200}
+                  height={300}
+                  className="w-full object-cover h-[400px] md:h-[400px] lg:h-[500px] transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transform scale-0 
+                              transition-all duration-700 origin-center rotate-45 group-hover:scale-[2]" />
+              </div>
             </motion.div>
             
             {/* Floating Phone Frame */}
             <motion.div 
-              className="absolute left-45 md:left-75 lg:left-16 top-70 md:top-75 lg:top-1/2 -translate-y-1/2 w-48 md:w-64 bg-[#030438] p-2 rounded-3xl shadow-xl"
+              className="absolute left-45 md:left-75 lg:left-16 top-70 md:top-75 lg:top-1/2 -translate-y-1/2 w-48 md:w-64 bg-[#030438] p-2 rounded-3xl shadow-xl overflow-hidden group"
               variants={phoneVariants}
             >
-              <div className="rounded-2xl overflow-hidden">
+              <div className="rounded-2xl overflow-hidden relative">
                 <Image
                   src="/About_Us/h2.jpg"
                   alt="Security expert"
                   width={300}
                   height={100}
-                  className="md:w-60 lg:w-full object-cover h-48 md:h-40 lg:h-60"
+                  className="md:w-60 lg:w-full object-cover h-48 md:h-40 lg:h-60 transition-transform duration-700 group-hover:scale-110"
                 />
+                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transform scale-0 
+                              transition-all duration-700 origin-center rotate-45 group-hover:scale-[2]" />
               </div>
             </motion.div>
           </motion.div>

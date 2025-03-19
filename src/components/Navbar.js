@@ -22,7 +22,7 @@ export default function Navbar() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    document.body.style.overflow = isMenuOpen ? "hidden" : "auto"; // Prevent scrolling when menu is open
+    document.body.style.overflow = !isMenuOpen ? "hidden" : "auto"; // Fixed the logic here
   };
 
   const closeMenu = () => {
@@ -30,9 +30,16 @@ export default function Navbar() {
     document.body.style.overflow = "auto";
   };
 
+  // Clean up the body overflow when component unmounts
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
   return (
     <nav
-      className={`relative top-0 left-0 w-full z-50 px-4 py-3 transition-all duration-500 flex justify-between items-center ${
+      className={`relative w-full z-50 px-4 py-3 transition-all duration-500 flex justify-between items-center ${
         isScrolled ? "bg-[#030438]/90 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
@@ -67,27 +74,30 @@ export default function Navbar() {
         </Link>
 
         {/* Mobile Menu Button */}
-        <button onClick={toggleMenu} className="md:hidden text-white text-2xl z-50">
+        <button onClick={toggleMenu} className="md:hidden text-white text-2xl relative z-50">
           {isMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden fixed top-0 left-0 w-full h-full bg-[#030438]/90 backdrop-blur-md flex flex-col items-center justify-center space-y-6 text-white text-lg font-medium tracking-wide z-40">
-          <Link href="/about" onClick={closeMenu} className={`${pathname === "/about" ? "text-gray-300" : "hover:text-gray-300 transition"}`}>
+        <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-[#030438] bg-opacity-95 backdrop-blur-md flex flex-col items-center justify-center space-y-8">
+          <Link href="/about" onClick={closeMenu} className={`${pathname === "/about" ? "text-gray-300" : "text-white hover:text-gray-300 transition"}`}>
             About us
           </Link>
-          <Link href="/portfolio" onClick={closeMenu} className={`${pathname === "/portfolio" ? "text-gray-300" : "hover:text-gray-300 transition"}`}>
+          <Link href="/portfolio" onClick={closeMenu} className={`${pathname === "/portfolio" ? "text-gray-300" : "text-white hover:text-gray-300 transition"}`}>
             Portfolio
           </Link>
-          <Link href="/services" onClick={closeMenu} className={`${pathname === "/services" ? "text-gray-300" : "hover:text-gray-300 transition"}`}>
+          <Link href="/services" onClick={closeMenu} className={`${pathname === "/services" ? "text-gray-300" : "text-white hover:text-gray-300 transition"}`}>
             Services
+          </Link>
+          <Link href="/case-study" onClick={closeMenu} className={`${pathname === "/case-study" ? "text-gray-300" : "text-white hover:text-gray-300 transition"}`}>
+            Case Study
           </Link>
 
           {/* CTA Button Inside Mobile Menu */}
           <Link href="/book-a-meeting" onClick={closeMenu}>
-            <button className="flex items-center gap-2 bg-gradient-to-b from-[#9F67FF] to-[#F271C4] hover:opacity-90 text-white px-4 py-2 rounded-2xl font-semibold text-base shadow-lg transition-all transform hover:scale-105">
+            <button className="flex items-center gap-2 bg-gradient-to-b from-[#9F67FF] to-[#F271C4] hover:opacity-90 text-white px-6 py-3 rounded-2xl font-semibold text-base shadow-lg transition-all transform hover:scale-105">
               <Image src="/phone.svg" alt="Phone" width={16} height={16} />
               Book a Meeting
             </button>

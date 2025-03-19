@@ -8,8 +8,7 @@ const clients = [
   { id: 2, logo: "/clients/vital.svg", alt: "Vital" },
   { id: 3, logo: "/clients/resly.svg", alt: "Resly" },
   { id: 4, logo: "/clients/humaans.svg", alt: "Humaans" },
-  { id: 5, logo: "/clients/visa.svg", alt: "Visa" },
-  { id: 6, logo: "/clients/stitch.svg", alt: "Stitch" },
+
 ];
 
 export default function TrustedClients() {
@@ -43,14 +42,14 @@ export default function TrustedClients() {
           {[...clients, ...clients].map((client, index) => (
             <div
               key={index}
-              className="w-[250px] h-[250px] flex-shrink-0 bg-white border border-gray-300 rounded-lg shadow-md overflow-hidden flex items-center justify-center"
+              className="w-[250px] h-[250px] flex-shrink-0 bg-white border border-gray-300 rounded-xl shadow-md overflow-hidden flex items-center justify-center"
             >
               <Image
                 src={client.logo}
                 alt={client.alt}
                 width={220}
                 height={220}
-                className="object-contain w-full h-full"
+                className="object-cover w-full h-full"
               />
             </div>
           ))}

@@ -63,7 +63,7 @@ const Carousel = forwardRef((props, ref) => {
           {/* Generate slides dynamically */}
           {[...portfolioItems, ...portfolioItems].map((item, index) => (
             <SwiperSlide key={index} className="w-[250px] sm:w-[300px] md:w-[350px] lg:w-[400px]">
-              <Link href={`/Portfolio/${item.alt.toLowerCase().replace(/\s+/g, "-")}`} passHref>
+              {/* <Link href={`/Portfolio/${item.alt.toLowerCase().replace(/\s+/g, "-")}`} passHref> */}
                 <motion.div
                   className="bg-white shadow-lg rounded-2xl p-4 cursor-pointer"
                   custom={index} // Pass index for stagger effect
@@ -80,7 +80,7 @@ const Carousel = forwardRef((props, ref) => {
                     className="rounded-lg w-full h-auto"
                   />
                 </motion.div>
-              </Link>
+              {/* </Link> */}
             </SwiperSlide>
           ))}
         </Swiper>

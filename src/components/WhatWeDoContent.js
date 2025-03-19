@@ -108,15 +108,17 @@ const Work = () => {
       viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
     >
-      {/* Header with "WHAT WE DO" */}
+      {/* Header with "WHAT WE DO" text */}
       <motion.div 
         className="flex items-center gap-2 mb-4 pt-8 md:pt-0"
         variants={titleVariants}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-indigo-600">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-[#51328F]">
+          <path strokeWidth="2" d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          <polyline strokeWidth="2" points="3.29 7 12 12 20.71 7"/>
+          <line strokeWidth="2" x1="12" y1="22" x2="12" y2="12"/>
         </svg>
-        <span className="text-sm font-medium tracking-wider text-indigo-600 uppercase">WHAT WE DO</span>
+        <span className="text-sm font-medium tracking-wider text-[#51328F] uppercase">WHAT WE DO</span>
       </motion.div>
       
       {/* Main Heading */}
@@ -142,9 +144,9 @@ const Work = () => {
       <div className="space-y-3">
         <ServiceFeatureItem 
           icon={
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6 text-blue-600">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M12 6v6l4 2"></path>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6 text-[#51328F]">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
             </svg>
           }
           text="Strategic Digital Transformation and Brand Positioning"
@@ -152,9 +154,10 @@ const Work = () => {
         />
         <ServiceFeatureItem 
           icon={
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6 text-blue-600">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6 text-[#51328F]">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
             </svg>
           }
           text="Advanced Web and App Development Solutions"
@@ -162,12 +165,12 @@ const Work = () => {
         />
         <ServiceFeatureItem 
           icon={
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6 text-blue-600">
-              <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-              <line x1="6" y1="1" x2="6" y2="4"></line>
-              <line x1="10" y1="1" x2="10" y2="4"></line>
-              <line x1="14" y1="1" x2="14" y2="4"></line>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6 text-[#51328F]">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <path d="M3.29 7L12 12l8.71-5"/>
+              <path d="M12 22V12"/>
+              <path d="M12 12L3 7"/>
+              <path d="M17 13.5V7.5"/>
             </svg>
           }
           text="Data-Driven Marketing and Analytics"
@@ -176,7 +179,7 @@ const Work = () => {
       </div>
 
       {/* Feature Cards */}
-      <div className="flex flex-wrap gap-4 mb-8">
+      <div className="flex flex-wrap gap-4 mb-8 mt-4">
         <FeatureCard 
           icon="/About_Us/6.svg"
           title="Innovative Solutions"

@@ -93,14 +93,18 @@ const Approach = () => {
 
           {/* Right Side - Image */}
           <motion.div 
-            className="w-full md:w-[60%] lg:w-[40%] mt-8 md:mt-0 md:absolute md:left-[250px] lg:left-[500px]"
+            className="w-full md:w-[60%] lg:w-[40%] mt-8 md:mt-0 md:absolute md:left-[250px] lg:left-[500px] overflow-hidden rounded-3xl group"
             variants={imageVariants}
           >
-            <img 
-              src="/About_Us/5.png"
-              alt="Expert Web Developer"
-              className="rounded-3xl shadow-lg w-full"
-            />
+            <div className="relative">
+              <img 
+                src="/About_Us/5.png"
+                alt="Expert Web Developer"
+                className="w-full transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transform scale-0 
+                            transition-all duration-700 origin-center rotate-45 group-hover:scale-[2]" />
+            </div>
           </motion.div>
         </div>
       </div>

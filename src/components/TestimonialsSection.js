@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Reviews from "./Reviews";
 
 export default function TestimonialsSection() {
   // Animation Variants
@@ -83,11 +84,8 @@ export default function TestimonialsSection() {
       </div>    
 
       {/* Placeholder for Testimonials */}
-      <div className="flex flex-col items-center justify-center w-full max-w-4xl mx-auto mt-10 p-8 bg-white shadow-lg rounded-lg min-h-[250px]">
-        <p className="text-gray-400 text-center">
-          {/* Placeholder text */}
-          Customer reviews will appear here...
-        </p>
+      <div className="flex flex-col items-center justify-center w-full max-w-4xl mx-auto mt-10 p-8 bg-[#white] shadow-lg rounded-lg min-h-[250px]">
+        <Reviews /> 
       </div>
 
       {/* Icon (Slides from Right + Floating) */}

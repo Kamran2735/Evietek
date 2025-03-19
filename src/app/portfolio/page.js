@@ -5,6 +5,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Breadcrumb from '@/components/BreadCrumb';
 
+// Add color mapping for skills
+const skillColors = {
+  "Digital Painting": "bg-[#FF6B6B]/20 text-[#FF6B6B]",
+  "Character Design": "bg-[#4ECDC4]/20 text-[#4ECDC4]",
+  "Vector Illustration": "bg-[#A78BFA]/20 text-[#A78BFA]",
+  "Brand Identity": "bg-[#F59E0B]/20 text-[#F59E0B]",
+  "Marketing Strategy": "bg-[#10B981]/20 text-[#10B981]",
+  "Visual Identity": "bg-[#EC4899]/20 text-[#EC4899]",
+  "Typography": "bg-[#8B5CF6]/20 text-[#8B5CF6]",
+};
+
 // Sample project data
 const projects = [
   {
@@ -12,9 +23,9 @@ const projects = [
     title: "Illustration",
     category: "design",
     description: "A collection of illustrations created by our talented design team",
-    image: "/portfolio/ecommerce.png",
+    image: "/Portfolio_Main/illustration.png",
     color: "#FF6B6B",
-    skills: ["Digital Painting,Character Design,Vector Illustration"],
+    skills: ["Digital Painting", "Character Design", "Vector Illustration"],
     link: "https://www.behance.net/gallery/221656995/Illustrations"
   },
   {
@@ -22,9 +33,9 @@ const projects = [
     title: "Branding",
     category: "design",
     description: "A collection of branding projects created by our talented design team",
-    image: "/portfolio/fitness.png",
+    image: "/Portfolio_Main/branding.png",
     color: "#4ECDC4",
-    skills: ["Brand Identity, Marketing Strategy,Visual Identity"],
+    skills: ["Brand Identity", "Marketing Strategy", "Visual Identity"],
     link: "https://www.behance.net/gallery/191328457/Branding"
   },
   {
@@ -32,9 +43,9 @@ const projects = [
     title: "Logo Design",
     category: "design",
     description: "A collection of logo design projects created by our talented design team",
-    image: "/portfolio/brand.png",
+    image: "/Portfolio_Main/logo.png",
     color: "#A78BFA",
-    skills: ["Vector Illustration, Brand Identity,Typography"],
+    skills: ["Vector Illustration", "Brand Identity", "Typography"],
     link: "https://www.behance.net/gallery/191322361/Logos"
   },
 ];
@@ -136,7 +147,7 @@ const PortfolioPage = () => {
                           whileTap={{ scale: 0.9 }}
                           className="px-6 py-2 bg-white text-[#030438] rounded-full font-medium"
                         >
-                          View Project
+                          View
                         </motion.a>
                       </motion.div>
                     )}
@@ -149,7 +160,7 @@ const PortfolioPage = () => {
                     {project.skills.map(skill => (
                       <span
                         key={skill}
-                        className="px-3 py-1 rounded-full text-sm bg-white/10 text-white"
+                        className={`px-3 py-1 rounded-full text-sm font-medium ${skillColors[skill] || 'bg-white/10 text-white'}`}
                       >
                         {skill}
                       </span>
